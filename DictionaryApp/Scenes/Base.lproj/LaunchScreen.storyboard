@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jT8-bP-8MN">
+                                <rect key="frame" x="19.5" y="289.5" width="375" height="327.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Cool Kids On Wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-7W-0mu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WordsFactory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy7-Sd-Xsc">
+                                        <rect key="frame" x="48" y="280" width="279" height="47.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="40"/>
+                                        <color key="textColor" name="inkDark"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sqq-7W-0mu" firstAttribute="leading" secondItem="jT8-bP-8MN" secondAttribute="leading" id="8w4-kG-T15"/>
+                                    <constraint firstItem="Sqq-7W-0mu" firstAttribute="top" secondItem="jT8-bP-8MN" secondAttribute="top" id="9aw-ce-pGF"/>
+                                    <constraint firstAttribute="bottom" secondItem="cy7-Sd-Xsc" secondAttribute="bottom" id="URM-u2-klQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sqq-7W-0mu" secondAttribute="trailing" id="Xpg-7N-sYr"/>
+                                    <constraint firstItem="cy7-Sd-Xsc" firstAttribute="centerX" secondItem="jT8-bP-8MN" secondAttribute="centerX" id="nqN-Fl-4Pb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jT8-bP-8MN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MlS-l9-YYw"/>
+                            <constraint firstItem="jT8-bP-8MN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ie2-2D-9RP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cool Kids On Wheels" width="375" height="264"/>
+        <namedColor name="inkDark">
+            <color red="0.23529411764705882" green="0.22745098039215686" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
