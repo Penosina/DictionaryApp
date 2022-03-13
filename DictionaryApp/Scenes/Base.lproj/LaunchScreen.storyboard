@@ -26,7 +26,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jT8-bP-8MN">
                                 <rect key="frame" x="19.5" y="289.5" width="375" height="327.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Cool Kids On Wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-7W-0mu">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="splashScreenGirl" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-7W-0mu">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WordsFactory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy7-Sd-Xsc">
@@ -59,9 +59,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Cool Kids On Wheels" width="375" height="264"/>
+        <image name="splashScreenGirl" width="375" height="264"/>
         <namedColor name="inkDark">
-            <color red="0.23529411764705882" green="0.22745098039215686" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23499999940395355" green="0.22699999809265137" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

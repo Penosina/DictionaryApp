@@ -8,9 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		73F2FD826AD0782D97C88B8E /* Pods_DictionaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0329DD8262F96AFFF2EB470D /* Pods_DictionaryApp.framework */; };
+		CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CF9E27D520E5009EA264 /* OnboardingViewModel.swift */; };
+		CE24CFA127D521CE009EA264 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA027D521CE009EA264 /* Images.swift */; };
+		CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA527D665AB009EA264 /* OnboardingCellViewModel.swift */; };
+		CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */; };
+		CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */; };
+		CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */; };
+		CE24CFAF27D67968009EA264 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAE27D67968009EA264 /* Colors.swift */; };
+		CE24CFB127D6869B009EA264 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB027D6869B009EA264 /* Errors.swift */; };
+		CE24CFB327D695DD009EA264 /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB227D695DD009EA264 /* BasePageControl.swift */; };
+		CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB427D69F70009EA264 /* TopicView.swift */; };
+		CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */; };
+		CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */; };
+		CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFC127D6A75D009EA264 /* SignUpViewController.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
 		CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */; };
-		CEF78AD427D4F9A900A82A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* ViewController.swift */; };
+		CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */; };
 		CEF78AD927D4F9A900A82A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AD827D4F9A900A82A6F /* Assets.xcassets */; };
 		CEF78ADC27D4F9A900A82A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF78ADA27D4F9A900A82A6F /* LaunchScreen.storyboard */; };
 		CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE727D4FAB700A82A6F /* Coordinator.swift */; };
@@ -30,10 +43,23 @@
 /* Begin PBXFileReference section */
 		0329DD8262F96AFFF2EB470D /* Pods_DictionaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DictionaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAA2C7F6036868DD40CB587 /* Pods-DictionaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictionaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DictionaryApp/Pods-DictionaryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CE24CF9E27D520E5009EA264 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		CE24CFA027D521CE009EA264 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		CE24CFA527D665AB009EA264 /* OnboardingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellViewModel.swift; sourceTree = "<group>"; };
+		CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellView.swift; sourceTree = "<group>"; };
+		CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicInfo.swift; sourceTree = "<group>"; };
+		CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeRoundedButton.swift; sourceTree = "<group>"; };
+		CE24CFAE27D67968009EA264 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE24CFB027D6869B009EA264 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		CE24CFB227D695DD009EA264 /* BasePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
+		CE24CFB427D69F70009EA264 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewModel.swift; sourceTree = "<group>"; };
+		CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		CE24CFC127D6A75D009EA264 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEF78AD327D4F9A900A82A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CEF78AD827D4F9A900A82A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF78ADB27D4F9A900A82A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF78ADD27D4F9A900A82A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +96,87 @@
 				0329DD8262F96AFFF2EB470D /* Pods_DictionaryApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE24CF9C27D520CB009EA264 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE24CF9D27D520D8009EA264 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CF9E27D520E5009EA264 /* OnboardingViewModel.swift */,
+				CE24CFA527D665AB009EA264 /* OnboardingCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE24CFA227D6646C009EA264 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE24CFA927D66E53009EA264 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE24CFB727D69F81009EA264 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFB927D69F8E009EA264 /* ViewModel */,
+				CE24CFB827D69F8A009EA264 /* View */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		CE24CFB827D69F8A009EA264 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFB427D69F70009EA264 /* TopicView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE24CFB927D69F8E009EA264 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE24CFBC27D6A302009EA264 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFB727D69F81009EA264 /* Topic */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE24CFBD27D6A525009EA264 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFC127D6A75D009EA264 /* SignUpViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE24CFBE27D6A530009EA264 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CEF78AC327D4F9A900A82A6F = {
@@ -119,8 +226,8 @@
 		CEF78AE427D4FA7600A82A6F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CEF78AE627D4FA9E00A82A6F /* Sign Up */,
 				CEF78AEF27D4FEBB00A82A6F /* Onboarding */,
+				CEF78AE627D4FA9E00A82A6F /* Sign Up */,
 				CEF78ADA27D4F9A900A82A6F /* LaunchScreen.storyboard */,
 			);
 			path = Scenes;
@@ -132,6 +239,9 @@
 				CEF78AF727D5024F00A82A6F /* Fonts.swift */,
 				CEF78AFC27D5038400A82A6F /* Strings.swift */,
 				CEF78AFE27D503A200A82A6F /* Dimensions.swift */,
+				CE24CFA027D521CE009EA264 /* Images.swift */,
+				CE24CFAE27D67968009EA264 /* Colors.swift */,
+				CE24CFB027D6869B009EA264 /* Errors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -139,6 +249,9 @@
 		CEF78AE627D4FA9E00A82A6F /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFBE27D6A530009EA264 /* ViewModel */,
+				CE24CFBD27D6A525009EA264 /* ViewController */,
+				CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -146,7 +259,10 @@
 		CEF78AEF27D4FEBB00A82A6F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				CEF78AD327D4F9A900A82A6F /* ViewController.swift */,
+				CE24CFA927D66E53009EA264 /* Model */,
+				CE24CFA227D6646C009EA264 /* View */,
+				CE24CF9D27D520D8009EA264 /* ViewModel */,
+				CE24CF9C27D520CB009EA264 /* ViewController */,
 				CEF78B0027D519E600A82A6F /* OnboardingCoordinator.swift */,
 			);
 			path = Onboarding;
@@ -165,8 +281,11 @@
 		CEF78AF927D502CC00A82A6F /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFBC27D6A302009EA264 /* Views */,
 				CEF78AF027D5008500A82A6F /* Fonts */,
 				CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */,
+				CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */,
+				CE24CFB227D695DD009EA264 /* BasePageControl.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -177,7 +296,6 @@
 				5DAA2C7F6036868DD40CB587 /* Pods-DictionaryApp.debug.xcconfig */,
 				EBE1FA6FC164AFA36A5EBBCF /* Pods-DictionaryApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,14 +417,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */,
+				CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */,
+				CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */,
+				CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */,
+				CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */,
 				CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */,
 				CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */,
+				CE24CFB327D695DD009EA264 /* BasePageControl.swift in Sources */,
 				CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
-				CEF78AD427D4F9A900A82A6F /* ViewController.swift in Sources */,
+				CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */,
+				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
+				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
+				CE24CFA127D521CE009EA264 /* Images.swift in Sources */,
 				CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */,
+				CE24CFAF27D67968009EA264 /* Colors.swift in Sources */,
+				CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */,
+				CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */,
 				CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */,
 				CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */,
+				CE24CFB127D6869B009EA264 /* Errors.swift in Sources */,
+				CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */,
 				CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */,
 				CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */,
 				CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */,
