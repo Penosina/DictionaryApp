@@ -51,7 +51,7 @@ class SignUpViewController: BaseViewController {
     
     private func setupScrollView() {
         scrollView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(140)
         }
     }
@@ -61,7 +61,7 @@ class SignUpViewController: BaseViewController {
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(scrollView.contentLayoutGuide).inset(Dimensions.standartHeight)
             make.width.equalToSuperview()
-            make.height.equalTo(signUpTopicView.snp.width).multipliedBy(Dimensions.topicViewAspectRatio)
+            make.height.equalTo(signUpTopicView.snp.width).multipliedBy(Dimensions.signUpTopicViewAspectRatio)
         }
     }
     
@@ -122,12 +122,8 @@ class SignUpViewController: BaseViewController {
     }
 }
 
-// MARK: - Strings
-private extension Strings {
-    
-}
-
 // MARK: - Dimensions
 private extension Dimensions {
+    static let signUpTopicViewAspectRatio = 0.88
     static let nextButtonBottomAnchor = 67.0
 }

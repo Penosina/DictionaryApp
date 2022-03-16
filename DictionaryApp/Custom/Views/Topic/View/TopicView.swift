@@ -3,7 +3,7 @@ import UIKit
 class TopicView: UIView {
     // MARK: - Properties
     private let centerImageView = UIImageView()
-    private let containerView = UIStackView()
+    private let containerView = UIView()
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
     private var viewModel: TopicViewModel?
@@ -43,11 +43,6 @@ class TopicView: UIView {
             make.top.equalTo(centerImageView.snp.bottom).offset(Dimensions.standart)
             make.leading.trailing.bottom.equalToSuperview()
         }
-        
-        containerView.alignment = .center
-        containerView.distribution = .fill
-        containerView.axis = .vertical
-        containerView.spacing = Dimensions.standart
     }
     
     private func setupTitleLabel() {
