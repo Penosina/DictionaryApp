@@ -35,6 +35,8 @@
 		CE24CFE527E23BA1009EA264 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE427E23BA1009EA264 /* DictionaryViewController.swift */; };
 		CE24CFE827E23BCE009EA264 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE727E23BCE009EA264 /* VideoViewController.swift */; };
 		CE24CFEA27E23BF5009EA264 /* DictionaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE927E23BF5009EA264 /* DictionaryViewModel.swift */; };
+		CE24CFED27E2697B009EA264 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFEC27E2697B009EA264 /* PasswordTextField.swift */; };
+		CE24CFEF27E2699B009EA264 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFEE27E2699B009EA264 /* SearchTextField.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
 		CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */; };
 		CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */; };
@@ -83,6 +85,8 @@
 		CE24CFE427E23BA1009EA264 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		CE24CFE727E23BCE009EA264 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CE24CFE927E23BF5009EA264 /* DictionaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewModel.swift; sourceTree = "<group>"; };
+		CE24CFEC27E2697B009EA264 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		CE24CFEE27E2699B009EA264 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +282,16 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		CE24CFEB27E2695F009EA264 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFC327DDA04E009EA264 /* CustomTextField.swift */,
+				CE24CFEC27E2697B009EA264 /* PasswordTextField.swift */,
+				CE24CFEE27E2699B009EA264 /* SearchTextField.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
 		CEF78AC327D4F9A900A82A6F = {
 			isa = PBXGroup;
 			children = (
@@ -384,12 +398,12 @@
 		CEF78AF927D502CC00A82A6F /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFEB27E2695F009EA264 /* CustomTextField */,
 				CE24CFBC27D6A302009EA264 /* Views */,
 				CEF78AF027D5008500A82A6F /* Fonts */,
 				CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */,
 				CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */,
 				CE24CFB227D695DD009EA264 /* CustomPageControl.swift */,
-				CE24CFC327DDA04E009EA264 /* CustomTextField.swift */,
 				CE24CFD527E2364C009EA264 /* TabBarController.swift */,
 			);
 			path = Custom;
@@ -542,6 +556,7 @@
 				CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */,
 				CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
+				CE24CFEF27E2699B009EA264 /* SearchTextField.swift in Sources */,
 				CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */,
 				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
 				CE24CFDA27E23ADA009EA264 /* DictionaryCoordinator.swift in Sources */,
@@ -562,6 +577,7 @@
 				CE24CFB127D6869B009EA264 /* Errors.swift in Sources */,
 				CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */,
 				CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */,
+				CE24CFED27E2697B009EA264 /* PasswordTextField.swift in Sources */,
 				CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */,
 				CE24CFE027E23B37009EA264 /* VideoCoordinator.swift in Sources */,
 				CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */,

@@ -8,7 +8,7 @@ class SignUpViewController: BaseViewController {
     private let signUpTopicView = TopicView()
     private let nameTextField = CustomTextField()
     private let emailTextField = CustomTextField()
-    private let passwordTextField = CustomTextField()
+    private let passwordTextField = PasswordTextField()
     private let nextButton = OrangeRoundedButton()
     private let viewModel: SignUpViewModel
     
@@ -92,8 +92,6 @@ class SignUpViewController: BaseViewController {
             make.bottom.equalTo(scrollView.contentLayoutGuide).inset(Dimensions.standart)
             make.height.equalTo(Dimensions.standartHeight)
         }
-        
-        passwordTextField.configure(withState: .password)
     }
     
     private func setupNextButton() {
