@@ -25,6 +25,16 @@
 		CE24CFC727DDA351009EA264 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFC627DDA351009EA264 /* SignUpViewModel.swift */; };
 		CE24CFCA27DDA81E009EA264 /* TPKeyboardAvoiding in Frameworks */ = {isa = PBXBuildFile; productRef = CE24CFC927DDA81E009EA264 /* TPKeyboardAvoiding */; };
 		CE24CFCD27E21BED009EA264 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFCC27E21BED009EA264 /* Validator.swift */; };
+		CE24CFD327E23420009EA264 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFD227E23420009EA264 /* TabBarCoordinator.swift */; };
+		CE24CFD627E2364C009EA264 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFD527E2364C009EA264 /* TabBarController.swift */; };
+		CE24CFD827E23A4E009EA264 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFD727E23A4E009EA264 /* TabCoordinator.swift */; };
+		CE24CFDA27E23ADA009EA264 /* DictionaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFD927E23ADA009EA264 /* DictionaryCoordinator.swift */; };
+		CE24CFDD27E23B15009EA264 /* TrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFDC27E23B15009EA264 /* TrainingCoordinator.swift */; };
+		CE24CFE027E23B37009EA264 /* VideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFDF27E23B37009EA264 /* VideoCoordinator.swift */; };
+		CE24CFE327E23B73009EA264 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE227E23B73009EA264 /* TrainingViewController.swift */; };
+		CE24CFE527E23BA1009EA264 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE427E23BA1009EA264 /* DictionaryViewController.swift */; };
+		CE24CFE827E23BCE009EA264 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE727E23BCE009EA264 /* VideoViewController.swift */; };
+		CE24CFEA27E23BF5009EA264 /* DictionaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFE927E23BF5009EA264 /* DictionaryViewModel.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
 		CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */; };
 		CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */; };
@@ -63,6 +73,16 @@
 		CE24CFC327DDA04E009EA264 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CE24CFC627DDA351009EA264 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		CE24CFCC27E21BED009EA264 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		CE24CFD227E23420009EA264 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		CE24CFD527E2364C009EA264 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE24CFD727E23A4E009EA264 /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		CE24CFD927E23ADA009EA264 /* DictionaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCoordinator.swift; sourceTree = "<group>"; };
+		CE24CFDC27E23B15009EA264 /* TrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCoordinator.swift; sourceTree = "<group>"; };
+		CE24CFDF27E23B37009EA264 /* VideoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoordinator.swift; sourceTree = "<group>"; };
+		CE24CFE227E23B73009EA264 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		CE24CFE427E23BA1009EA264 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		CE24CFE727E23BCE009EA264 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		CE24CFE927E23BF5009EA264 /* DictionaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewModel.swift; sourceTree = "<group>"; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,11 +218,64 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CE24CFCE27E21E23009EA264 /* New Group */ = {
+		CE24CFCE27E21E23009EA264 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFD127E23410009EA264 /* ViewModel */,
+				CE24CFD027E23408009EA264 /* ViewController */,
+				CE24CFD927E23ADA009EA264 /* DictionaryCoordinator.swift */,
 			);
-			path = "New Group";
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		CE24CFD027E23408009EA264 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFE427E23BA1009EA264 /* DictionaryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE24CFD127E23410009EA264 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFE927E23BF5009EA264 /* DictionaryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE24CFDB27E23B08009EA264 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFE127E23B5E009EA264 /* ViewController */,
+				CE24CFDC27E23B15009EA264 /* TrainingCoordinator.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		CE24CFDE27E23B27009EA264 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFE627E23BBE009EA264 /* ViewController */,
+				CE24CFDF27E23B37009EA264 /* VideoCoordinator.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		CE24CFE127E23B5E009EA264 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFE227E23B73009EA264 /* TrainingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE24CFE627E23BBE009EA264 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFE727E23BCE009EA264 /* VideoViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CEF78AC327D4F9A900A82A6F = {
@@ -245,6 +318,8 @@
 				CEF78AE727D4FAB700A82A6F /* Coordinator.swift */,
 				CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */,
 				CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */,
+				CE24CFD227E23420009EA264 /* TabBarCoordinator.swift */,
+				CE24CFD727E23A4E009EA264 /* TabCoordinator.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -252,9 +327,11 @@
 		CEF78AE427D4FA7600A82A6F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CFCE27E21E23009EA264 /* New Group */,
 				CEF78AEF27D4FEBB00A82A6F /* Onboarding */,
 				CEF78AE627D4FA9E00A82A6F /* Sign Up */,
+				CE24CFCE27E21E23009EA264 /* Dictionary */,
+				CE24CFDB27E23B08009EA264 /* Training */,
+				CE24CFDE27E23B27009EA264 /* Video */,
 				CEF78ADA27D4F9A900A82A6F /* LaunchScreen.storyboard */,
 			);
 			path = Scenes;
@@ -313,6 +390,7 @@
 				CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */,
 				CE24CFB227D695DD009EA264 /* CustomPageControl.swift */,
 				CE24CFC327DDA04E009EA264 /* CustomTextField.swift */,
+				CE24CFD527E2364C009EA264 /* TabBarController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -452,30 +530,40 @@
 				CE24CFC427DDA04E009EA264 /* CustomTextField.swift in Sources */,
 				CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */,
 				CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */,
+				CE24CFD627E2364C009EA264 /* TabBarController.swift in Sources */,
 				CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */,
 				CE24CFCD27E21BED009EA264 /* Validator.swift in Sources */,
+				CE24CFD327E23420009EA264 /* TabBarCoordinator.swift in Sources */,
 				CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */,
 				CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */,
 				CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */,
+				CE24CFE327E23B73009EA264 /* TrainingViewController.swift in Sources */,
 				CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */,
 				CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */,
 				CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
 				CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */,
 				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
+				CE24CFDA27E23ADA009EA264 /* DictionaryCoordinator.swift in Sources */,
+				CE24CFE527E23BA1009EA264 /* DictionaryViewController.swift in Sources */,
 				CE24CFC727DDA351009EA264 /* SignUpViewModel.swift in Sources */,
+				CE24CFD827E23A4E009EA264 /* TabCoordinator.swift in Sources */,
 				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
+				CE24CFDD27E23B15009EA264 /* TrainingCoordinator.swift in Sources */,
 				CE24CFA127D521CE009EA264 /* Images.swift in Sources */,
 				CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */,
 				CE24CFAF27D67968009EA264 /* Colors.swift in Sources */,
 				CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */,
 				CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */,
+				CE24CFEA27E23BF5009EA264 /* DictionaryViewModel.swift in Sources */,
 				CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */,
 				CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */,
+				CE24CFE827E23BCE009EA264 /* VideoViewController.swift in Sources */,
 				CE24CFB127D6869B009EA264 /* Errors.swift in Sources */,
 				CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */,
 				CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */,
 				CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */,
+				CE24CFE027E23B37009EA264 /* VideoCoordinator.swift in Sources */,
 				CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
