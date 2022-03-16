@@ -10,7 +10,7 @@ class OnboardingViewController: BaseViewController {
         layout.minimumLineSpacing = 0
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
-    private let pageControl = BasePageControl()
+    private let pageControl = CustomPageControl()
     private let nextButton = OrangeRoundedButton()
     private let viewModel: OnboardingViewModel
     
@@ -67,7 +67,7 @@ class OnboardingViewController: BaseViewController {
         collectionView.snp.makeConstraints { make in
             make.leading.trailing.centerY.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(collectionView.snp.width).multipliedBy(Dimensions.collectionViewAspectRatio)
+            make.height.equalTo(collectionView.snp.width).multipliedBy(Dimensions.topicViewAspectRatio)
         }
         
         collectionView.showsHorizontalScrollIndicator = false
@@ -160,9 +160,4 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
 private extension Strings {
     static let skip = "Skip"
     static let reuseIdentifier = String(describing: OnboardingCellView.self)
-}
-
-// MARK: - Dimensions
-private extension Dimensions {
-    static let collectionViewAspectRatio = 1.0838
 }

@@ -35,7 +35,16 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
     func removeOnboardingCoordinatorAndShowSignUpScene(onboardingCoordinator: OnboardingCoordinator) {
         removeAllChildCoordinatorsWithType(type(of: onboardingCoordinator))
         let signUpCoordinator = SignUpCoordinator(rootNavigationController: rootNavigationController, dependencies: dependencies)
+        signUpCoordinator.delegate = self
         childCoordinators.append(signUpCoordinator)
         signUpCoordinator.start()
+    }
+}
+
+// MARK: - SignUpCoordinatorDelegate
+extension AppCoordinator: SignUpCoordinatorDelegate {
+    func removeSignUpCoordinatorAndShowTabBar(signUpCoordinator: SignUpCoordinator) {
+        removeAllChildCoordinatorsWithType(type(of: signUpCoordinator))
+        // Tab bar
     }
 }

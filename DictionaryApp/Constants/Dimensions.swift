@@ -13,4 +13,6 @@ enum Dimensions {
     static let standartHeight = 56.0
     /// 14.0
     static let subtitle = 14.0
+    /// 1.0838
+    static let topicViewAspectRatio = 1.0838
 }

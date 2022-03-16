@@ -6,4 +6,5 @@ enum Colors {
     static let lightBlue = UIColor(named: "lightBlue")
     static let lightGray = UIColor(named: "lightGray")
     static let gray = UIColor(named: "gray")
+    static let textFieldBorder = UIColor(named: "textFieldBorder")
 }
