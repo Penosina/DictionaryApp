@@ -1,25 +1,23 @@
 import Foundation
 import UIKit
 
-final class MeaningCellViewModel {
+final class MeaningViewModel {
     // MARK: - Properties
     var definitionString: String?
     var example: NSMutableAttributedString?
-    
-    var didUpdateData: (() -> Void)?
     
     private let definition: Definition
     
     // MARK: - Init
     init(definition: Definition) {
         self.definition = definition
-    }
-    
-    // MARK: - Public Methods
-    func start() {
         definitionString = definition.definition
+        guard let exampleString = definition.example, !exampleString.isEmpty else {
+            return
+        }
+        
         example = NSMutableAttributedString(
-            string: "Example: " + (definition.example ?? ""),
+            string: "Example: " + exampleString,
             attributes: [
                 .font: UIFont.rubik(.regular, size: Dimensions.subtitle)
             ]
@@ -27,7 +25,5 @@ final class MeaningCellViewModel {
         example?.addAttribute(.foregroundColor,
                               value: Colors.lightBlue?.cgColor ?? UIColor.blue.cgColor,
                               range: NSRange(location: 0, length: 8))
-        
-        didUpdateData?()
     }
 }

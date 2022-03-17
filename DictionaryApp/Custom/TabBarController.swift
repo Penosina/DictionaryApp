@@ -11,13 +11,21 @@ class TabBarController: UITabBarController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        tabBar.layer.borderWidth = 1
+        tabBar.layer.borderColor = Colors.textFieldBorder?.cgColor
         tabBar.layer.cornerRadius = Dimensions.standart
         tabBar.layer.maskedCorners = [
             .layerMaxXMinYCorner,
             .layerMinXMinYCorner
         ]
-        tabBar.layer.borderColor = Colors.textFieldBorder?.cgColor
-        tabBar.layer.borderWidth = 1
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        let kBarHeight = Dimensions.standartHeight + 10
+        tabBar.frame.size.height = kBarHeight
+        tabBar.frame.origin.y = view.frame.height - kBarHeight
     }
     
     // MARK: - Private Methods

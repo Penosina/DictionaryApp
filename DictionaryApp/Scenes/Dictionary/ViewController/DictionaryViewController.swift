@@ -25,6 +25,9 @@ class DictionaryViewController: BaseViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bindToViewModel()
+        viewModel.start()
     }
     
     // MARK: - Private Methods
@@ -54,39 +57,60 @@ class DictionaryViewController: BaseViewController {
     private func setupPlugTopicView() {
         plugTopicView.snp.makeConstraints { make in
             make.leading.trailing.centerY.equalToSuperview()
-            make.height.equalTo(plugTopicView.snp.width).multipliedBy(Dimensions.topicViewAspectRatio)
+            make.height.equalTo(plugTopicView.snp.width).multipliedBy(Dimensions.plugAspectRatio)
         }
     }
     
     private func setupScrollView() {
         scrollView.snp.makeConstraints { make in
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.top.equalTo(searchTextField.snp.bottom).offset(Dimensions.standart)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.scrollViewBottomConstraint)
-            #warning("Check if not needed")
-            make.width.equalToSuperview()
+            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(searchTextField.snp.bottom)
         }
     }
     
     private func setupWordView() {
         wordView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.bottom.equalTo(scrollView.contentLayoutGuide).inset(Dimensions.standart)
+            make.top.equalTo(scrollView.contentLayoutGuide).inset(Dimensions.standart)
+            make.bottom.equalTo(scrollView.contentLayoutGuide)
+            make.width.equalToSuperview()
         }
     }
     
     private func setupAddToDictionaryButton() {
         addToDictionaryButton.snp.makeConstraints { make in
-            make.leading.trailing.bottom.equalTo(Dimensions.buttonHorizontalCostraint)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.buttonVerticalConstraint)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.buttonHorizontalCostraint)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.standart)
             make.height.equalTo(Dimensions.standartHeight)
         }
         
         addToDictionaryButton.configure(withTitle: Strings.addToDictionary)
+        addToDictionaryButton.addTarget(self,
+                                        action: #selector(addToDictionary),
+                                        for: .touchUpInside)
     }
     
     private func bindToViewModel() {
+        viewModel.didSetPlug = { [weak self] topicViewModel in
+            self?.plugTopicView.configure(with: topicViewModel)
+        }
         
+        viewModel.didShowPlug = { [weak self] in
+            self?.wordView.isHidden = true
+            self?.addToDictionaryButton.isHidden = true
+            self?.plugTopicView.isHidden = false
+        }
+        
+        viewModel.didUpdateData = { [weak self] wordViewModel in
+            self?.plugTopicView.isHidden = true
+            self?.wordView.isHidden = false
+            self?.addToDictionaryButton.isHidden = false
+            self?.wordView.configure(with: wordViewModel)
+        }
+        
+        viewModel.didReceiveError = { [weak self] error in
+            self?.showError(error)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -97,15 +121,14 @@ class DictionaryViewController: BaseViewController {
 // MARK: - SearchTextFieldDelegate
 extension DictionaryViewController: SearchTextFieldDelegate {
     func search() {
-        
+        viewModel.searchWord(word: searchTextField.text)
     }
 }
 
 // MARK: - Dimensions
 private extension Dimensions {
     static let buttonHorizontalCostraint = 33.0
-    static let buttonVerticalConstraint = 82.0
-    static let scrollViewBottomConstraint = 66.0
+    static let plugAspectRatio = 0.92267
 }
 
 // MARK: - Strings

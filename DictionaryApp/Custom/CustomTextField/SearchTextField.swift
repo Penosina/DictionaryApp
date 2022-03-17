@@ -19,6 +19,11 @@ class SearchTextField: CustomTextField {
     override func setup() {
         super.setup()
         
+        returnKeyType = .done
+        padding = UIEdgeInsets(top: Dimensions.standart,
+                               left: Dimensions.standart,
+                               bottom: Dimensions.standart,
+                               right: Dimensions.standartHeight)
         setupImageView()
     }
     

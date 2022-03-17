@@ -1,5 +1,6 @@
 final class WordViewModel {
     // MARK: - Properties
+    var meaningsViewModels: [MeaningViewModel] = []
     var countOfMeanings: Int {
         meaningsViewModels.count
     }
@@ -11,7 +12,6 @@ final class WordViewModel {
     
     private let word: Word
     private var meanings: [Definition]?
-    private var meaningsViewModels: [MeaningCellViewModel] = []
     
     // MARK: - Init
     init(word: Word) {
@@ -21,15 +21,15 @@ final class WordViewModel {
     // MARK: - Public Methods
     func start() {
         wordString = word.word
-        wordTranscription = word.phontic
-        partOfSpeech = word.meanings?.first?.pertOfSpeech
+        wordTranscription = word.phonetic
+        partOfSpeech = word.meanings?.first?.partOfSpeech
         meanings = word.meanings?.first?.definitions
         setCellViewModels()
         
         didUpdateData?()
     }
     
-    func getCellViewModel(index: Int) throws -> MeaningCellViewModel {
+    func getCellViewModel(index: Int) throws -> MeaningViewModel {
         guard index < meaningsViewModels.count else {
             throw Errors.indexOutOfRange
         }
@@ -37,10 +37,16 @@ final class WordViewModel {
         return meaningsViewModels[index]
     }
     
+    func playSound() {
+        
+    }
+    
     // MARK: - Private Methods
     private func setCellViewModels() {
-        meanings?.forEach { definition in
-            meaningsViewModels.append(MeaningCellViewModel(definition: definition))
+        meaningsViewModels = []
+        meanings?.forEach { meaning in
+            let meaningCellViewModel = MeaningViewModel(definition: meaning)
+            meaningsViewModels.append(meaningCellViewModel)
         }
     }
 }

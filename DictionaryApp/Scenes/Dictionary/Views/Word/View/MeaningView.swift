@@ -1,11 +1,18 @@
 import UIKit
 
-class MeaningCellView: UITableViewCell {
+class MeaningView: UIView {
     // MARK: - Properties
     private let containerView = UIStackView()
     private let definitionLabel = UILabel()
     private let exampleLabel = UILabel()
-    private var viewModel: MeaningCellViewModel?
+    private let viewModel: MeaningViewModel
+    
+    // MARK: - Init
+    init(viewModel: MeaningViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
+        setup()
+    }
     
     // MARK: - Lifecycle
     override func layoutSubviews() {
@@ -16,20 +23,11 @@ class MeaningCellView: UITableViewCell {
         layer.cornerRadius = Dimensions.standart
     }
     
-    // MARK: - Public Methods
-    func configure(with viewModel: MeaningCellViewModel) {
-        setup()
-        
-        self.viewModel = viewModel
-        bindToViewModel()
-        self.viewModel?.start()
-    }
-    
     // MARK: - Private Methods
     private func setup() {
         addSubview(containerView)
-        containerView.addSubview(definitionLabel)
-        containerView.addSubview(exampleLabel)
+        containerView.addArrangedSubview(definitionLabel)
+        containerView.addArrangedSubview(exampleLabel)
         
         setupContainerView()
         setupDefinitionLabel()
@@ -48,16 +46,17 @@ class MeaningCellView: UITableViewCell {
     private func setupDefinitionLabel() {
         definitionLabel.font = UIFont.rubik(.regular, size: Dimensions.subtitle)
         definitionLabel.textColor = .black
+        definitionLabel.numberOfLines = 0
+        definitionLabel.text = viewModel.definitionString
     }
     
     private func setupExampleLabel() {
         exampleLabel.font = UIFont.rubik(.regular, size: Dimensions.subtitle)
+        exampleLabel.numberOfLines = 0
+        exampleLabel.attributedText = viewModel.example
     }
     
-    private func bindToViewModel() {
-        viewModel?.didUpdateData = { [weak self] in
-            self?.definitionLabel.text = self?.viewModel?.definitionString
-            self?.exampleLabel.attributedText = self?.viewModel?.example
-        }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

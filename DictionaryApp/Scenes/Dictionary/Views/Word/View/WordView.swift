@@ -10,8 +10,13 @@ class WordView: UIView {
     private let partOfSpeechLabel = UILabel()
     private let partOfSpeechValueLabel = UILabel()
     private let meaningsLabel = UILabel()
-    private let meaningsTableView = UITableView()
+    private let meaningsStackView = UIStackView()
     private var viewModel: WordViewModel?
+    
+    // MARK: - Actions
+    @objc private func playSound() {
+        viewModel?.playSound()
+    }
     
     // MARK: - Configuration
     func configure(with viewModel: WordViewModel) {
@@ -24,15 +29,17 @@ class WordView: UIView {
     
     // MARK: - Private Methods
     private func setup() {
+        backgroundColor = .clear
+        
         addSubview(firstStackView)
-        firstStackView.addSubview(wordLabel)
-        firstStackView.addSubview(wordTranscriptionLabel)
-        firstStackView.addSubview(volumeImageView)
+        firstStackView.addArrangedSubview(wordLabel)
+        firstStackView.addArrangedSubview(wordTranscriptionLabel)
+        firstStackView.addArrangedSubview(volumeImageView)
         addSubview(secondStackView)
-        secondStackView.addSubview(partOfSpeechLabel)
-        secondStackView.addSubview(partOfSpeechValueLabel)
+        secondStackView.addArrangedSubview(partOfSpeechLabel)
+        secondStackView.addArrangedSubview(partOfSpeechValueLabel)
         addSubview(meaningsLabel)
-        addSubview(meaningsTableView)
+        addSubview(meaningsStackView)
         
         setupFirstStackView()
         setupWordLabel()
@@ -42,12 +49,12 @@ class WordView: UIView {
         setupPartOfSpeechLabel()
         setupPartOfSpeechValueLabel()
         setupMeaningsLabel()
-        setupMeaningsTableView()
+        setupMeaningsStackView()
     }
     
     private func setupFirstStackView() {
         firstStackView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().inset(Dimensions.standart)
             make.leading.equalToSuperview().inset(Dimensions.standart)
         }
         
@@ -68,6 +75,10 @@ class WordView: UIView {
     private func setupVolumeImageView() {
         volumeImageView.contentMode = .scaleAspectFit
         volumeImageView.image = UIImage(named: Images.volume)
+        volumeImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(playSound))
+        volumeImageView.addGestureRecognizer(tapGesture)
     }
     
     private func setupSecondStackView() {
@@ -81,7 +92,7 @@ class WordView: UIView {
     }
     
     private func setupPartOfSpeechLabel() {
-        partOfSpeechLabel.font = UIFont.rubik(.medium, size: 20)
+        partOfSpeechLabel.font = UIFont.rubik(.medium, size: Dimensions.premedium)
         partOfSpeechLabel.textColor = .black
         partOfSpeechLabel.text = "Part Of Speech:"
     }
@@ -97,55 +108,34 @@ class WordView: UIView {
             make.top.equalTo(secondStackView.snp.bottom).offset(Dimensions.standart)
         }
         
-        meaningsLabel.font = UIFont.rubik(.medium, size: 20)
+        meaningsLabel.font = UIFont.rubik(.medium, size: Dimensions.premedium)
         meaningsLabel.textColor = .black
         meaningsLabel.text = "Meanings:"
     }
     
-    private func setupMeaningsTableView() {
-        meaningsTableView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview()
-            make.top.equalTo(meaningsLabel.snp.bottom).offset(10)
-            make.bottom.equalToSuperview()
+    private func setupMeaningsStackView() {
+        meaningsStackView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(Dimensions.standart)
+            make.top.equalTo(meaningsLabel.snp.bottom).offset(Dimensions.standartSpacing)
+            make.bottom.equalToSuperview().inset(Dimensions.bottomStackViewConstraint)
         }
         
-        meaningsTableView.register(MeaningCellView.self,
-                                   forCellReuseIdentifier: Strings.reuseIdentifier)
-        meaningsTableView.delegate = self
-        meaningsTableView.dataSource = self
+        meaningsStackView.axis = .vertical
+        meaningsStackView.spacing = Dimensions.standartSpacing
     }
-    
+
     private func bindToViewModel() {
         viewModel?.didUpdateData = { [weak self] in
+            self?.meaningsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
             self?.wordLabel.text = self?.viewModel?.wordString
             self?.wordTranscriptionLabel.text = self?.viewModel?.wordTranscription
             self?.partOfSpeechValueLabel.text = self?.viewModel?.partOfSpeech
-            self?.meaningsTableView.reloadData()
+            self?.viewModel?.meaningsViewModels.forEach { meaningViewModel in
+                self?.meaningsStackView.addArrangedSubview(
+                    MeaningView(viewModel: meaningViewModel)
+                )
+            }
         }
-    }
-}
-
-// MARK: - UITableViewDelegate & UITableViewDataSource
-extension WordView: UITableViewDelegate & UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel?.countOfMeanings ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Strings.reuseIdentifier) as? MeaningCellView else {
-            return UITableViewCell()
-        }
-        
-        do {
-            let cellViewModel = try viewModel?.getCellViewModel(index: indexPath.row)
-            cell.configure(with: cellViewModel
-                           ?? MeaningCellViewModel(definition: Definition(definition: "",
-                                                                          example: "")))
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        return cell
     }
 }
 
@@ -157,4 +147,10 @@ private extension Images {
 // MARK: - Strings
 private extension Strings {
     static let reuseIdentifier = "MeaningCellView"
+}
+
+// MARK: - Dimensions
+private extension Dimensions {
+    static let bottomStackViewConstraint = 88.0
+    static let premedium = 20.0
 }

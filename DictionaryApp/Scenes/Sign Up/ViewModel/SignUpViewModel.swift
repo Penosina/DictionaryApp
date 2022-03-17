@@ -24,6 +24,10 @@ final class SignUpViewModel {
     }
     
     func signUp(name: String?, email: String?, password: String?) {
+        
+        delegate?.showTabBar()
+        return
+        
         guard let name = name else {
             didReceiveError?(Errors.hasEmptyFields)
             return
