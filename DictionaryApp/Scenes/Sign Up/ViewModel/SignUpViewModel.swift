@@ -12,7 +12,7 @@ final class SignUpViewModel {
     var didReceiveError: ((Error) -> Void)?
     var didUpdateData: ((TopicViewModel) -> Void)?
     
-    private let signUpTopicViewModel: TopicViewModel = TopicViewModel(topicInfo: TopicInfo(
+    private let signUpTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
         image: UIImage(named: Images.signUpTopicViewImage) ?? UIImage(),
         title: Strings.signUp,
         subtitle: Strings.signUpTopicSubtitle
