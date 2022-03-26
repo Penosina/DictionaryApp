@@ -1,28 +1,12 @@
+import Foundation
+
 struct Word: Codable {
-    enum CodingKeys: String, CodingKey {
-        case word, phoneticString = "phonetic", phonetics, meanings
-    }
-    
     let word: String?
-    let phonetics: [Phonetics]?
+    let phonetics: [Phonetic]?
     let meanings: [Meaning]?
-    var phonetic: String? {
-        setupPhonetic(text: phoneticString ?? "")
-    }
-    
-    private let phoneticString: String?
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        word = try container.decodeIfPresent(String.self,
-                                             forKey: .word)
-        phoneticString = try container.decodeIfPresent(String.self,
-                                                       forKey: .phoneticString)
-        phonetics = try container.decodeIfPresent([Phonetics].self,
-                                                  forKey: .phonetics)
-        meanings = try container.decodeIfPresent([Meaning].self,
-                                                 forKey: .meanings)
+    let phonetic: String?
+    var phoneticString: String? {
+        setupPhonetic(text: phonetic ?? "")
     }
     
     private func setupPhonetic(text: String) -> String {
@@ -38,9 +22,16 @@ struct Word: Codable {
     }
 }
 
-struct Phonetics: Codable {
+struct Phonetic: Codable {
     let text: String?
     let audio: String?
+    var audioURL: URL? {
+        guard let audio = audio else {
+            return nil
+        }
+        
+        return URL(string: audio)
+    }
 }
 
 struct Meaning: Codable {

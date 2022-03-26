@@ -29,17 +29,17 @@ final class SignUpViewModel {
         return
         
         guard let name = name else {
-            didReceiveError?(Errors.hasEmptyFields)
+            didReceiveError?(ValidationError.hasEmptyFields)
             return
         }
         
         guard let email = email else {
-            didReceiveError?(Errors.hasEmptyFields)
+            didReceiveError?(ValidationError.hasEmptyFields)
             return
         }
         
         guard let password = password else {
-            didReceiveError?(Errors.hasEmptyFields)
+            didReceiveError?(ValidationError.hasEmptyFields)
             return
         }
 

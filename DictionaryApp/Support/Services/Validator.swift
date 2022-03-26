@@ -3,15 +3,15 @@ final class Validator {
         var errors: [Error] = []
         
         if !email.contains("@") {
-            errors.append(Errors.emailValidation)
+            errors.append(ValidationError.emailValidation)
         }
         
         if name.count < 4 {
-            errors.append(Errors.nameValidation)
+            errors.append(ValidationError.nameValidation)
         }
         
         if password.count < 6 {
-            errors.append(Errors.passwordValidation)
+            errors.append(ValidationError.passwordValidation)
         }
         
         return errors

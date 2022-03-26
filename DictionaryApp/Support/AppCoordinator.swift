@@ -11,7 +11,8 @@ final class AppCoordinator: Coordinator {
     init(window: UIWindow?) {
         self.window = window
         childCoordinators = []
-        dependencies = Dependencies(networkManager: NetworkManager())
+        dependencies = Dependencies(wordsRepository: WordsRepository(),
+                                    audioService: AudioService())
         rootNavigationController = UINavigationController()
         rootNavigationController.setNavigationBarHidden(true, animated: false)
     }
@@ -23,7 +24,8 @@ final class AppCoordinator: Coordinator {
         window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()
         
-        let startCoordinator = OnboardingCoordinator(rootNavigationController: rootNavigationController, dependencies: dependencies)
+        let startCoordinator = OnboardingCoordinator(rootNavigationController: rootNavigationController,
+                                                     dependencies: dependencies)
         startCoordinator.delegate = self
         childCoordinators.append(startCoordinator)
         startCoordinator.start()
@@ -34,7 +36,8 @@ final class AppCoordinator: Coordinator {
 extension AppCoordinator: OnboardingCoordinatorDelegate {
     func removeOnboardingCoordinatorAndShowSignUpScene(onboardingCoordinator: OnboardingCoordinator) {
         removeAllChildCoordinatorsWithType(type(of: onboardingCoordinator))
-        let signUpCoordinator = SignUpCoordinator(rootNavigationController: rootNavigationController, dependencies: dependencies)
+        let signUpCoordinator = SignUpCoordinator(rootNavigationController: rootNavigationController,
+                                                  dependencies: dependencies)
         signUpCoordinator.delegate = self
         childCoordinators.append(signUpCoordinator)
         signUpCoordinator.start()

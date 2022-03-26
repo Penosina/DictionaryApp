@@ -12,7 +12,7 @@ class DictionaryViewController: BaseViewController {
     
     // MARK: - Actions
     @objc private func addToDictionary() {
-        
+        viewModel.addToRepository()
     }
     
     // MARK: - Init

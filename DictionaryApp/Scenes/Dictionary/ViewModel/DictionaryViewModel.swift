@@ -4,7 +4,7 @@ final class DictionaryViewModel {
     // MARK: - Properties
     var didSetPlug: ((TopicViewModel) -> Void)?
     var didShowPlug: (() -> Void)?
-    var didUpdateData: ((WordViewModel) -> Void)?
+    var didUpdateData: ((WordViewModel?) -> Void)?
     var didReceiveError: ((Error) -> Void)?
     
     private let plugTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
@@ -12,7 +12,11 @@ final class DictionaryViewModel {
         title: Strings.plugTitle,
         subtitle: Strings.plugSubtitle
     ))
-    private var wordViewModel: WordViewModel?
+    private var wordViewModel: WordViewModel? {
+        didSet {
+            wordViewModel?.delegate = self
+        }
+    }
     private let dependencies: Dependencies
     
     // MARK: - Init
@@ -32,15 +36,25 @@ final class DictionaryViewModel {
             return
         }
 
-        dependencies.networkManager.find(word: word) { [weak self] wordModel in
-            self?.didUpdateData?(WordViewModel(word: wordModel))
-        } onError: { [weak self] error, statusCode in
+        dependencies.wordsRepository.get(word: word) { [weak self] wordModel in
+            self?.wordViewModel = WordViewModel(word: wordModel)
+            self?.didUpdateData?(self?.wordViewModel)
+        } onError: { [weak self] error in
             self?.didReceiveError?(error)
         }
     }
     
-    // MARK: - Private Methods
-    
+    func addToRepository() {
+        guard let word = wordViewModel?.word else { return }
+        dependencies.wordsRepository.addToRepository(word: word)
+    }    
+}
+
+// MARK: - WordViewModelDelegate
+extension DictionaryViewModel: WordViewModelDelegate {
+    func playSound(audioURL: URL) {
+        dependencies.audioService.playSound(audioURL: audioURL)
+    }
 }
 
 // MARK: - Images

@@ -1,3 +1,4 @@
 struct Dependencies {
-    let networkManager: NetworkManager
+    let wordsRepository: WordsRepository
+    let audioService: AudioService
 }

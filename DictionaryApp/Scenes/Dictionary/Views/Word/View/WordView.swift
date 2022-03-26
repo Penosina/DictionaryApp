@@ -19,7 +19,7 @@ class WordView: UIView {
     }
     
     // MARK: - Configuration
-    func configure(with viewModel: WordViewModel) {
+    func configure(with viewModel: WordViewModel?) {
         setup()
         
         self.viewModel = viewModel
@@ -135,6 +135,14 @@ class WordView: UIView {
                     MeaningView(viewModel: meaningViewModel)
                 )
             }
+        }
+        
+        viewModel?.didHideVolumeImage = { [weak self] in
+            self?.volumeImageView.isHidden = true
+        }
+        
+        viewModel?.didShowVolumeImage = { [weak self] in
+            self?.volumeImageView.isHidden = false
         }
     }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DBDefinition" representedClassName="DBDefinition" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <relationship name="meaning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBMeaning" inverseName="definitions" inverseEntity="DBMeaning"/>
+    </entity>
+    <entity name="DBMeaning" representedClassName="DBMeaning" syncable="YES">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBDefinition" inverseName="meaning" inverseEntity="DBDefinition"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBWord" inverseName="meanings" inverseEntity="DBWord"/>
+    </entity>
+    <entity name="DBPhonetic" representedClassName="DBPhonetic" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBWord" inverseName="phonetics" inverseEntity="DBWord"/>
+    </entity>
+    <entity name="DBWord" representedClassName="DBWord" syncable="YES">
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBMeaning" inverseName="word" inverseEntity="DBMeaning"/>
+        <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBPhonetic" inverseName="word" inverseEntity="DBPhonetic"/>
+    </entity>
+    <elements>
+        <element name="DBWord" positionX="-320.59765625" positionY="-41.171875" width="128" height="89"/>
+        <element name="DBPhonetic" positionX="-147.36328125" positionY="150.49609375" width="128" height="88"/>
+        <element name="DBMeaning" positionX="-379.54296875" positionY="187.58984375" width="128" height="88"/>
+        <element name="DBDefinition" positionX="-188.04296875" positionY="308.76953125" width="128" height="88"/>
+    </elements>
+</model>

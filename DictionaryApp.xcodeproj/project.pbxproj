@@ -42,6 +42,21 @@
 		CE24CFFB27E2840F009EA264 /* MeaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFFA27E2840F009EA264 /* MeaningView.swift */; };
 		CE24CFFD27E28426009EA264 /* MeaningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFFC27E28426009EA264 /* MeaningViewModel.swift */; };
 		CE24CFFF27E284D4009EA264 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFFE27E284D4009EA264 /* Word.swift */; };
+		CE24D00527E46281009EA264 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D00427E46281009EA264 /* Repository.swift */; };
+		CE24D00927E4EB6F009EA264 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE24D00727E4EB6F009EA264 /* Model.xcdatamodeld */; };
+		CE24D01C27E4EE65009EA264 /* CoreDataContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D01B27E4EE65009EA264 /* CoreDataContextProvider.swift */; };
+		CE24D02527E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D01D27E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift */; };
+		CE24D02627E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D01E27E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift */; };
+		CE24D02727E4F0EB009EA264 /* DBMeaning+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D01F27E4F0EB009EA264 /* DBMeaning+CoreDataClass.swift */; };
+		CE24D02827E4F0EB009EA264 /* DBMeaning+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02027E4F0EB009EA264 /* DBMeaning+CoreDataProperties.swift */; };
+		CE24D02927E4F0EB009EA264 /* DBDefinition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02127E4F0EB009EA264 /* DBDefinition+CoreDataClass.swift */; };
+		CE24D02A27E4F0EB009EA264 /* DBDefinition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02227E4F0EB009EA264 /* DBDefinition+CoreDataProperties.swift */; };
+		CE24D02B27E4F0EB009EA264 /* DBWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02327E4F0EB009EA264 /* DBWord+CoreDataClass.swift */; };
+		CE24D02C27E4F0EB009EA264 /* DBWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02427E4F0EB009EA264 /* DBWord+CoreDataProperties.swift */; };
+		CE24D02E27E4F23B009EA264 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02D27E4F23B009EA264 /* CoreDataRepository.swift */; };
+		CE24D03027E51077009EA264 /* WordsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02F27E51077009EA264 /* WordsRepository.swift */; };
+		CE24D03227E52EA5009EA264 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D03127E52EA5009EA264 /* CoreDataService.swift */; };
+		CE24D03627E73278009EA264 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D03527E73278009EA264 /* AudioService.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
 		CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */; };
 		CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */; };
@@ -50,7 +65,7 @@
 		CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE727D4FAB700A82A6F /* Coordinator.swift */; };
 		CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */; };
 		CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */; };
-		CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */; };
+		CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AED27D4FB5200A82A6F /* APIService.swift */; };
 		CEF78AF427D500D600A82A6F /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */; };
 		CEF78AF527D500D600A82A6F /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */; };
 		CEF78AF627D500D600A82A6F /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */; };
@@ -97,6 +112,23 @@
 		CE24CFFA27E2840F009EA264 /* MeaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningView.swift; sourceTree = "<group>"; };
 		CE24CFFC27E28426009EA264 /* MeaningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningViewModel.swift; sourceTree = "<group>"; };
 		CE24CFFE27E284D4009EA264 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		CE24D00427E46281009EA264 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CE24D00827E4EB6F009EA264 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE24D01B27E4EE65009EA264 /* CoreDataContextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextProvider.swift; sourceTree = "<group>"; };
+		CE24D01D27E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBPhonetic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE24D01E27E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBPhonetic+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE24D01F27E4F0EB009EA264 /* DBMeaning+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBMeaning+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE24D02027E4F0EB009EA264 /* DBMeaning+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBMeaning+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE24D02127E4F0EB009EA264 /* DBDefinition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBDefinition+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE24D02227E4F0EB009EA264 /* DBDefinition+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBDefinition+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE24D02327E4F0EB009EA264 /* DBWord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBWord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE24D02427E4F0EB009EA264 /* DBWord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE24D02D27E4F23B009EA264 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		CE24D02F27E51077009EA264 /* WordsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsRepository.swift; sourceTree = "<group>"; };
+		CE24D03127E52EA5009EA264 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		CE24D03527E73278009EA264 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		CE24D03727E739A9009EA264 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CE24D03827E739A9009EA264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +139,7 @@
 		CEF78AE727D4FAB700A82A6F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CEF78AED27D4FB5200A82A6F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
@@ -135,6 +167,8 @@
 		302EF35DBA5D02E723F5F1C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE24D03727E739A9009EA264 /* AVFoundation.framework */,
+				CE24D03827E739A9009EA264 /* Foundation.framework */,
 				0329DD8262F96AFFF2EB470D /* Pods_DictionaryApp.framework */,
 			);
 			name = Frameworks;
@@ -226,8 +260,11 @@
 		CE24CFCB27E21BD8009EA264 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */,
+				CE24D00627E4EB51009EA264 /* CoreDataService */,
+				CE24D00127E45FD4009EA264 /* Repository */,
+				CEF78AED27D4FB5200A82A6F /* APIService.swift */,
 				CE24CFCC27E21BED009EA264 /* Validator.swift */,
+				CE24D03527E73278009EA264 /* AudioService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -345,6 +382,42 @@
 				CE24CFF227E27192009EA264 /* Word */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE24D00127E45FD4009EA264 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CE24D00427E46281009EA264 /* Repository.swift */,
+				CE24D02D27E4F23B009EA264 /* CoreDataRepository.swift */,
+				CE24D02F27E51077009EA264 /* WordsRepository.swift */,
+				CE24D03127E52EA5009EA264 /* CoreDataService.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CE24D00627E4EB51009EA264 /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+				CE24D00A27E4ED58009EA264 /* Models */,
+				CE24D00727E4EB6F009EA264 /* Model.xcdatamodeld */,
+				CE24D01B27E4EE65009EA264 /* CoreDataContextProvider.swift */,
+			);
+			path = CoreDataService;
+			sourceTree = "<group>";
+		};
+		CE24D00A27E4ED58009EA264 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE24D01D27E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift */,
+				CE24D01E27E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift */,
+				CE24D01F27E4F0EB009EA264 /* DBMeaning+CoreDataClass.swift */,
+				CE24D02027E4F0EB009EA264 /* DBMeaning+CoreDataProperties.swift */,
+				CE24D02127E4F0EB009EA264 /* DBDefinition+CoreDataClass.swift */,
+				CE24D02227E4F0EB009EA264 /* DBDefinition+CoreDataProperties.swift */,
+				CE24D02327E4F0EB009EA264 /* DBWord+CoreDataClass.swift */,
+				CE24D02427E4F0EB009EA264 /* DBWord+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CEF78AC327D4F9A900A82A6F = {
@@ -598,6 +671,7 @@
 			files = (
 				CE24CFC427DDA04E009EA264 /* CustomTextField.swift in Sources */,
 				CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */,
+				CE24D03227E52EA5009EA264 /* CoreDataService.swift in Sources */,
 				CE24CFFF27E284D4009EA264 /* Word.swift in Sources */,
 				CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */,
 				CE24CFD627E2364C009EA264 /* TabBarController.swift in Sources */,
@@ -605,42 +679,56 @@
 				CE24CFCD27E21BED009EA264 /* Validator.swift in Sources */,
 				CE24CFF927E271D0009EA264 /* WordViewModel.swift in Sources */,
 				CE24CFD327E23420009EA264 /* TabBarCoordinator.swift in Sources */,
+				CE24D03027E51077009EA264 /* WordsRepository.swift in Sources */,
 				CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */,
 				CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */,
 				CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */,
 				CE24CFE327E23B73009EA264 /* TrainingViewController.swift in Sources */,
+				CE24D02E27E4F23B009EA264 /* CoreDataRepository.swift in Sources */,
 				CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */,
 				CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */,
+				CE24D02627E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift in Sources */,
 				CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
+				CE24D00527E46281009EA264 /* Repository.swift in Sources */,
+				CE24D02527E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift in Sources */,
 				CE24CFEF27E2699B009EA264 /* SearchTextField.swift in Sources */,
+				CE24D02827E4F0EB009EA264 /* DBMeaning+CoreDataProperties.swift in Sources */,
 				CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */,
 				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
 				CE24CFDA27E23ADA009EA264 /* DictionaryCoordinator.swift in Sources */,
+				CE24D03627E73278009EA264 /* AudioService.swift in Sources */,
 				CE24CFE527E23BA1009EA264 /* DictionaryViewController.swift in Sources */,
 				CE24CFC727DDA351009EA264 /* SignUpViewModel.swift in Sources */,
+				CE24D01C27E4EE65009EA264 /* CoreDataContextProvider.swift in Sources */,
 				CE24CFD827E23A4E009EA264 /* TabCoordinator.swift in Sources */,
 				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
 				CE24CFDD27E23B15009EA264 /* TrainingCoordinator.swift in Sources */,
 				CE24CFA127D521CE009EA264 /* Images.swift in Sources */,
+				CE24D02927E4F0EB009EA264 /* DBDefinition+CoreDataClass.swift in Sources */,
 				CE24CFFD27E28426009EA264 /* MeaningViewModel.swift in Sources */,
-				CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */,
+				CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */,
 				CE24CFAF27D67968009EA264 /* Colors.swift in Sources */,
+				CE24D02A27E4F0EB009EA264 /* DBDefinition+CoreDataProperties.swift in Sources */,
 				CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */,
 				CE24CFFB27E2840F009EA264 /* MeaningView.swift in Sources */,
 				CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */,
+				CE24D00927E4EB6F009EA264 /* Model.xcdatamodeld in Sources */,
 				CE24CFEA27E23BF5009EA264 /* DictionaryViewModel.swift in Sources */,
 				CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */,
 				CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */,
 				CE24CFE827E23BCE009EA264 /* VideoViewController.swift in Sources */,
+				CE24D02B27E4F0EB009EA264 /* DBWord+CoreDataClass.swift in Sources */,
 				CE24CFB127D6869B009EA264 /* Errors.swift in Sources */,
 				CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */,
 				CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */,
 				CE24CFF727E271BD009EA264 /* WordView.swift in Sources */,
 				CE24CFED27E2697B009EA264 /* PasswordTextField.swift in Sources */,
+				CE24D02727E4F0EB009EA264 /* DBMeaning+CoreDataClass.swift in Sources */,
 				CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */,
 				CE24CFE027E23B37009EA264 /* VideoCoordinator.swift in Sources */,
 				CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */,
+				CE24D02C27E4F0EB009EA264 /* DBWord+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +963,19 @@
 			productName = TPKeyboardAvoiding;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CE24D00727E4EB6F009EA264 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE24D00827E4EB6F009EA264 /* Model.xcdatamodel */,
+			);
+			currentVersion = CE24D00827E4EB6F009EA264 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CEF78AC427D4F9A900A82A6F /* Project object */;
 }
