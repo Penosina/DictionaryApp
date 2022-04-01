@@ -59,7 +59,7 @@ class OnboardingViewController: BaseViewController {
         
         skipButton.titleLabel?.font = UIFont.rubik(.medium, size: Dimensions.subtitle)
         skipButton.setTitleColor(Colors.gray, for: .normal)
-        skipButton.setTitle(Strings.skip, for: .normal)
+        skipButton.setTitle("skip".localized(), for: .normal)
         skipButton.addTarget(self, action: #selector(skipOnboardingScene), for: .touchUpInside)
     }
     
@@ -94,7 +94,7 @@ class OnboardingViewController: BaseViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.standart)
         }
         
-        nextButton.configure(withTitle: Strings.next)
+        nextButton.configure(withTitle: "next".localized())
         nextButton.addTarget(self, action: #selector(showNextPageOrNextScene), for: .touchUpInside)
     }
     
@@ -158,6 +158,5 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Strings
 private extension Strings {
-    static let skip = "Skip"
     static let reuseIdentifier = String(describing: OnboardingCellView.self)
 }

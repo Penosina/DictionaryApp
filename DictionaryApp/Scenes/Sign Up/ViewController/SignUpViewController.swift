@@ -101,7 +101,7 @@ class SignUpViewController: BaseViewController {
             make.height.equalTo(Dimensions.standartHeight)
         }
         
-        nextButton.configure(withTitle: Strings.signUp)
+        nextButton.configure(withTitle: "sign_up".localized())
         nextButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
     }
     

@@ -84,7 +84,7 @@ class DictionaryViewController: BaseViewController {
             make.height.equalTo(Dimensions.standartHeight)
         }
         
-        addToDictionaryButton.configure(withTitle: Strings.addToDictionary)
+        addToDictionaryButton.configure(withTitle: "add_to_dictionary".localized())
         addToDictionaryButton.addTarget(self,
                                         action: #selector(addToDictionary),
                                         for: .touchUpInside)
@@ -129,9 +129,4 @@ extension DictionaryViewController: SearchTextFieldDelegate {
 private extension Dimensions {
     static let buttonHorizontalCostraint = 33.0
     static let plugAspectRatio = 0.92267
-}
-
-// MARK: - Strings
-private extension Strings {
-    static let addToDictionary = "Add to Dictionary"
 }

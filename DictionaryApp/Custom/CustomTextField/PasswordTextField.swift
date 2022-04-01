@@ -18,7 +18,7 @@ final class PasswordTextField: CustomTextField {
     override func setup() {
         super.setup()
         
-        placeholder = "Password"
+        placeholder = "password".localized()
         padding = UIEdgeInsets(top: Dimensions.standart,
                                left: Dimensions.standart,
                                bottom: Dimensions.standart,

@@ -57,6 +57,8 @@
 		CE24D03027E51077009EA264 /* WordsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02F27E51077009EA264 /* WordsRepository.swift */; };
 		CE24D03227E52EA5009EA264 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D03127E52EA5009EA264 /* CoreDataService.swift */; };
 		CE24D03627E73278009EA264 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D03527E73278009EA264 /* AudioService.swift */; };
+		CEF7793927F723EA0093103C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF7793B27F723EA0093103C /* Localizable.strings */; };
+		CEF7793F27F72D3D0093103C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7793E27F72D3D0093103C /* Strings.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
 		CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */; };
 		CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */; };
@@ -71,7 +73,7 @@
 		CEF78AF627D500D600A82A6F /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */; };
 		CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AF727D5024F00A82A6F /* Fonts.swift */; };
 		CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */; };
-		CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFC27D5038400A82A6F /* Strings.swift */; };
+		CEF78AFD27D5038400A82A6F /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFC27D5038400A82A6F /* String+localized.swift */; };
 		CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFE27D503A200A82A6F /* Dimensions.swift */; };
 		CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78B0027D519E600A82A6F /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -129,6 +131,8 @@
 		CE24D03527E73278009EA264 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CE24D03727E739A9009EA264 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CE24D03827E739A9009EA264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEF7793A27F723EA0093103C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEF7793E27F72D3D0093103C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +149,7 @@
 		CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		CEF78AF727D5024F00A82A6F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		CEF78AFC27D5038400A82A6F /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CEF78AFC27D5038400A82A6F /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		CEF78AFE27D503A200A82A6F /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		CEF78B0027D519E600A82A6F /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EBE1FA6FC164AFA36A5EBBCF /* Pods-DictionaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictionaryApp.release.xcconfig"; path = "Target Support Files/Pods-DictionaryApp/Pods-DictionaryApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -260,9 +264,9 @@
 		CE24CFCB27E21BD8009EA264 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CEF7792F27F720520093103C /* APIService */,
 				CE24D00627E4EB51009EA264 /* CoreDataService */,
 				CE24D00127E45FD4009EA264 /* Repository */,
-				CEF78AED27D4FB5200A82A6F /* APIService.swift */,
 				CE24CFCC27E21BED009EA264 /* Validator.swift */,
 				CE24D03527E73278009EA264 /* AudioService.swift */,
 			);
@@ -420,6 +424,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CEF7792F27F720520093103C /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				CEF78AED27D4FB5200A82A6F /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		CEF78AC327D4F9A900A82A6F = {
 			isa = PBXGroup;
 			children = (
@@ -483,11 +495,13 @@
 			isa = PBXGroup;
 			children = (
 				CEF78AF727D5024F00A82A6F /* Fonts.swift */,
-				CEF78AFC27D5038400A82A6F /* Strings.swift */,
+				CEF78AFC27D5038400A82A6F /* String+localized.swift */,
 				CEF78AFE27D503A200A82A6F /* Dimensions.swift */,
 				CE24CFA027D521CE009EA264 /* Images.swift */,
 				CE24CFAE27D67968009EA264 /* Colors.swift */,
 				CE24CFB027D6869B009EA264 /* Errors.swift */,
+				CEF7793B27F723EA0093103C /* Localizable.strings */,
+				CEF7793E27F72D3D0093103C /* Strings.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -613,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF78ADC27D4F9A900A82A6F /* LaunchScreen.storyboard in Resources */,
+				CEF7793927F723EA0093103C /* Localizable.strings in Resources */,
 				CEF78AF527D500D600A82A6F /* Rubik-Bold.ttf in Resources */,
 				CEF78AF427D500D600A82A6F /* Rubik-Regular.ttf in Resources */,
 				CEF78AD927D4F9A900A82A6F /* Assets.xcassets in Resources */,
@@ -688,7 +703,8 @@
 				CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */,
 				CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */,
 				CE24D02627E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift in Sources */,
-				CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */,
+				CEF7793F27F72D3D0093103C /* Strings.swift in Sources */,
+				CEF78AFD27D5038400A82A6F /* String+localized.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
 				CE24D00527E46281009EA264 /* Repository.swift in Sources */,
 				CE24D02527E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift in Sources */,
@@ -735,6 +751,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CEF7793B27F723EA0093103C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF7793A27F723EA0093103C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CEF78ADA27D4F9A900A82A6F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -750,6 +774,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -811,6 +836,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

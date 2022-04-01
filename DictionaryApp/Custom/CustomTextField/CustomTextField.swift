@@ -2,9 +2,9 @@ import UIKit
 
 class CustomTextField: UITextField {
     // MARK: - Enum TextFieldState
-    enum TextFieldState: String {
-        case name = "Name"
-        case email = "E-mail"
+    enum TextFieldState {
+        case name
+        case email
     }
 
     // MARK: - Properties
@@ -43,12 +43,12 @@ class CustomTextField: UITextField {
     
     // MARK: - Public Methods
     func configure(withState state: TextFieldState) {
-        placeholder = state.rawValue
-        
         switch state {
         case .email:
+            placeholder = "email".localized()
             setupEmailState()
         default:
+            placeholder = "name".localized()
             break
         }
     }
@@ -73,3 +73,4 @@ class CustomTextField: UITextField {
 private extension Dimensions {
     static let eyeIconPadding = 14.5
 }
+

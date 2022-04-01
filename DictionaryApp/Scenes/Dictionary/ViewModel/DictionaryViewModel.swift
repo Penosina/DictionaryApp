@@ -8,9 +8,9 @@ final class DictionaryViewModel {
     var didReceiveError: ((Error) -> Void)?
     
     private let plugTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
-        image: UIImage(named: Images.plug) ?? UIImage(),
-        title: Strings.plugTitle,
-        subtitle: Strings.plugSubtitle
+        image: Images.plug,
+        title: "plug_title".localized(),
+        subtitle: "plug_subtitle".localized()
     ))
     private var wordViewModel: WordViewModel? {
         didSet {
@@ -60,10 +60,4 @@ extension DictionaryViewModel: WordViewModelDelegate {
 // MARK: - Images
 private extension Images {
     static let plug = "plug"
-}
-
-// MARK: - Strings
-private extension Strings {
-    static let plugTitle = "No word"
-    static let plugSubtitle = "Input something to find it in dictionary"
 }

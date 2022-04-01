@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
         alert.setValue(NSAttributedString(string: text ?? "", attributes: [
             .font : UIFont.rubik(.regular, size: Dimensions.standart)
         ]), forKey: Strings.alertKey)
-        let okAction = UIAlertAction(title: Strings.ok, style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "ok".localized(), style: .default, handler: nil)
         alert.view.tintColor = .black
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
@@ -31,6 +31,5 @@ class BaseViewController: UIViewController {
 
 // MARK: - Strings
 private extension Strings {
-    static let ok = "Ок"
     static let alertKey = "attributedTitle"
 }

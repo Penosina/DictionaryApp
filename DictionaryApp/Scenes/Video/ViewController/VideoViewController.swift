@@ -23,7 +23,7 @@ class VideoViewController: BaseViewController {
         }
         
         titleLabel.font = .rubik(.bold, size: Dimensions.large)
-        titleLabel.text = Strings.comingSoon
+        titleLabel.text = "coming_soon".localized()
     }
     
     required init?(coder: NSCoder) {

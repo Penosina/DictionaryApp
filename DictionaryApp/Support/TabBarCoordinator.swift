@@ -37,7 +37,7 @@ final class TabBarCoordinator: Coordinator {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let item = UITabBarItem(title: Strings.dictionaryTabTitle,
+        let item = UITabBarItem(title: "dictionary_tab_title".localized(),
                                 image: UIImage(named: Images.dictionaryTabIcon),
                                 selectedImage: nil)
         item.setTitleTextAttributes([
@@ -58,7 +58,7 @@ final class TabBarCoordinator: Coordinator {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let item = UITabBarItem(title: Strings.trainingTabTitle,
+        let item = UITabBarItem(title: "training_tab_title".localized(),
                                 image: UIImage(named: Images.trainingTabIcon),
                                 selectedImage: nil)
         item.setTitleTextAttributes([
@@ -79,7 +79,7 @@ final class TabBarCoordinator: Coordinator {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let item = UITabBarItem(title: Strings.videoTabTitle,
+        let item = UITabBarItem(title: "video_tab_title".localized(),
                                 image: UIImage(named: Images.videotabIcon),
                                 selectedImage: nil)
         item.setTitleTextAttributes([
@@ -95,13 +95,6 @@ final class TabBarCoordinator: Coordinator {
         
         return navController
     }
-}
-
-// MARK: - Strings
-private extension Strings {
-    static let dictionaryTabTitle = "Dictionary"
-    static let trainingTabTitle = "Training"
-    static let videoTabTitle = "Video"
 }
 
 // MARK: - Images

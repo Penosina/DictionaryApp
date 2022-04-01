@@ -13,9 +13,9 @@ final class SignUpViewModel {
     var didUpdateData: ((TopicViewModel) -> Void)?
     
     private let signUpTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
-        image: UIImage(named: Images.signUpTopicViewImage) ?? UIImage(),
-        title: Strings.signUp,
-        subtitle: Strings.signUpTopicSubtitle
+        image: Images.signUpTopicViewImage,
+        title: "sign_up".localized(),
+        subtitle: "sign_up_topic_subtitle".localized()
     ))
     
     // MARK: - Public Methods
@@ -53,11 +53,6 @@ final class SignUpViewModel {
         
         delegate?.showTabBar()
     }
-}
-
-// MARK: - Strings
-private extension Strings {
-    static let signUpTopicSubtitle = "Create your account"
 }
 
 // MARK: - Images

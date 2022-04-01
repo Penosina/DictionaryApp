@@ -1,0 +1,33 @@
+"next" = "Next";
+"lets_start" = "Let's Start";
+"sign_up" = "Sign up";
+"coming_soon" = "Coming Soon...";
+"ok" = "Ok";
+"skip" = "Skip";
+"email" = "E-mail";
+"password" = "Password";
+"name" = "Name";
+
+"onboarding_first_title" = "Learn anytime and anywhere";
+"onboarding_first_subtitle" = "Quarantine is the perfect time to spend your day learning something new, from anywhere!";
+"onboarding_second_title" = "Find a course for you";
+"onboarding_second_subtitle" = "Quarantine is the perfect time to spend your day learning something new, from anywhere!";
+"onboarding_third_title" = "Improve your skills";
+"onboarding_third_subtitle" = "Quarantine is the perfect time to spend your day learning something new, from anywhere!";
+
+"empty_fields" = "There are empty fields. Please fill it with data";
+"email_validation" = "Email should have @";
+"name_validation" = "Name should be greater then 6 characters";
+"password_validation" = "Password should be greater then 6 characters";
+"index_out_of_range" = "Index out of range";
+"already_in_repository" = "Word is already in dictionary";
+"no_such_word_in_repository" = "No such word in repository";
+
+"dictionary_tab_title" = "Dictionary";
+"training_tab_title" = "Training";
+"video_tab_title" = "Video";
+
+"sign_up_topic_subtitle" = "Create your account";
+"plug_title" = "No word";
+"plug_subtitle" = "Input something to find it in dictionary";
+"add_to_dictionary" = "Add to Dictionary";
