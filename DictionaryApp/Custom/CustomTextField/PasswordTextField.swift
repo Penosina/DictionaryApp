@@ -8,9 +8,9 @@ final class PasswordTextField: CustomTextField {
     @objc private func eyeImageViewTapped() {
         isSecureTextEntry = !isSecureTextEntry
         if isSecureTextEntry {
-            imageView.image = UIImage(named: Images.closedEye)
+            imageView.image = R.image.closedEye()
         } else {
-            imageView.image = UIImage(named: Images.eye)
+            imageView.image = R.image.eye()
         }
     }
     
@@ -18,7 +18,7 @@ final class PasswordTextField: CustomTextField {
     override func setup() {
         super.setup()
         
-        placeholder = "password".localized()
+        placeholder = R.string.localizable.password()
         padding = UIEdgeInsets(top: Dimensions.standart,
                                left: Dimensions.standart,
                                bottom: Dimensions.standart,
@@ -38,13 +38,7 @@ final class PasswordTextField: CustomTextField {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(eyeImageViewTapped))
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: Images.closedEye)
+        imageView.image = R.image.closedEye()
         imageView.addGestureRecognizer(tapGestureRecognizer)
     }
-}
-
-// MARK: - Images
-private extension Images {
-    static let eye = "eye"
-    static let closedEye = "closedEye"
 }

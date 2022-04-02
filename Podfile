@@ -7,6 +7,6 @@ target 'DictionaryApp' do
 
   pod 'Alamofire', '~> 5.5'
   pod 'SnapKit', '~> 5.0.0'
-  
+  pod 'R.swift'
 
 end

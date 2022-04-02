@@ -6,13 +6,13 @@ enum ValidationError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .hasEmptyFields:
-            return "empty_fields".localized()
+            return R.string.localizable.emptyFields()
         case .emailValidation:
-            return "email_validation".localized()
+            return R.string.localizable.emailValidation()
         case .passwordValidation:
-            return "password_validation".localized()
+            return R.string.localizable.passwordValidation()
         case .nameValidation:
-            return "name_validation".localized()
+            return R.string.localizable.nameValidation()
         }
     }
 }
@@ -23,7 +23,7 @@ enum Errors: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .indexOutOfRange:
-            return "index_out_of_range".localized()
+            return R.string.localizable.indexOutOfRange()
         }
     }
 }
@@ -36,9 +36,9 @@ enum CoreDataError: LocalizedError {
         case .invalidManagedObjectType:
             return ""
         case .alreadyInRepository:
-            return "already_in_repository".localized()
+            return R.string.localizable.alreadyInRepository()
         case .noSuchWordInRepository:
-            return "no_such_word_in_repository".localized()
+            return R.string.localizable.noSuchWordInRepository()
         }
     }
 }

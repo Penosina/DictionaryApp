@@ -38,23 +38,23 @@ class CustomTextField: UITextField {
         
         layer.cornerRadius = Dimensions.medium/2
         layer.borderWidth = 1
-        layer.borderColor = Colors.textFieldBorder?.cgColor
+        layer.borderColor = R.color.textFieldBorder()?.cgColor
     }
     
     // MARK: - Public Methods
     func configure(withState state: TextFieldState) {
         switch state {
         case .email:
-            placeholder = "email".localized()
+            placeholder = R.string.localizable.email()
             setupEmailState()
         default:
-            placeholder = "name".localized()
+            placeholder = R.string.localizable.name()
             break
         }
     }
     
     func setup() {
-        font = UIFont.rubik(.regular, size: Dimensions.subtitle)
+        font = R.font.rubikRegular(size: Dimensions.subtitle)
         textColor = .black
     }
     

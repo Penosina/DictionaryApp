@@ -2,8 +2,8 @@ import UIKit
 
 class CustomPageControl: UIPageControl {
     // MARK: - Properties
-    var currentPageImage: UIImage? = UIImage(named: Images.currentPageImage)
-    var otherPagesImage: UIImage? = UIImage(named: Images.otherPagesImage)
+    var currentPageImage: UIImage? = R.image.currentPageImage()
+    var otherPagesImage: UIImage? = R.image.otherPagesImage()
 
     override var numberOfPages: Int {
         didSet {
@@ -67,10 +67,4 @@ class CustomPageControl: UIPageControl {
         
         return view.subviews.first { $0 is UIImageView } as? UIImageView
     }
-}
-
-// MARK: - Images
-private extension Images {
-    static let currentPageImage = "currentPageImage"
-    static let otherPagesImage = "otherPagesImage"
 }

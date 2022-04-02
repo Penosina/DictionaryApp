@@ -37,11 +37,11 @@ final class TabBarCoordinator: Coordinator {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let item = UITabBarItem(title: "dictionary_tab_title".localized(),
-                                image: UIImage(named: Images.dictionaryTabIcon),
+        let item = UITabBarItem(title: R.string.localizable.dictionaryTabTitle(),
+                                image: R.image.dictionaryIcon(),
                                 selectedImage: nil)
         item.setTitleTextAttributes([
-            .font : UIFont.rubik(.regular, size: Dimensions.subtitle)
+            .font : R.font.rubikRegular(size: Dimensions.subtitle) as Any
         ], for: .normal)
         
         navController.tabBarItem = item
@@ -58,11 +58,11 @@ final class TabBarCoordinator: Coordinator {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let item = UITabBarItem(title: "training_tab_title".localized(),
-                                image: UIImage(named: Images.trainingTabIcon),
+        let item = UITabBarItem(title: R.string.localizable.trainingTabTitle(),
+                                image: R.image.trainingIcon(),
                                 selectedImage: nil)
         item.setTitleTextAttributes([
-            .font : UIFont.rubik(.regular, size: Dimensions.subtitle)
+            .font: R.font.rubikRegular(size: Dimensions.subtitle) as Any
         ], for: .normal)
         
         navController.tabBarItem = item
@@ -79,11 +79,11 @@ final class TabBarCoordinator: Coordinator {
         let navController = UINavigationController()
         navController.isNavigationBarHidden = true
         
-        let item = UITabBarItem(title: "video_tab_title".localized(),
-                                image: UIImage(named: Images.videotabIcon),
+        let item = UITabBarItem(title: R.string.localizable.videoTabTitle(),
+                                image: R.image.videoIcon(),
                                 selectedImage: nil)
         item.setTitleTextAttributes([
-            .font : UIFont.rubik(.regular, size: Dimensions.subtitle)
+            .font: R.font.rubikRegular(size: Dimensions.subtitle) as Any
         ], for: .normal)
         
         navController.tabBarItem = item
@@ -95,11 +95,4 @@ final class TabBarCoordinator: Coordinator {
         
         return navController
     }
-}
-
-// MARK: - Images
-private extension Images {
-    static let dictionaryTabIcon = "dictionaryIcon"
-    static let trainingTabIcon = "trainingIcon"
-    static let videotabIcon = "videoIcon"
 }

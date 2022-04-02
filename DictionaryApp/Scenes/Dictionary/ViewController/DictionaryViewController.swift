@@ -84,7 +84,7 @@ class DictionaryViewController: BaseViewController {
             make.height.equalTo(Dimensions.standartHeight)
         }
         
-        addToDictionaryButton.configure(withTitle: "add_to_dictionary".localized())
+        addToDictionaryButton.configure(withTitle: R.string.localizable.addToDictionary())
         addToDictionaryButton.addTarget(self,
                                         action: #selector(addToDictionary),
                                         for: .touchUpInside)

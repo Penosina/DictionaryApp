@@ -16,9 +16,9 @@ final class OnboardingViewModel {
     var currentPage: Int = 0 {
         didSet {
             if currentPage == numberOfCells - 1 {
-                didUpdateNextButtonTitle?("lets_start".localized())
+                didUpdateNextButtonTitle?(R.string.localizable.letsStart())
             } else {
-                didUpdateNextButtonTitle?("next".localized())
+                didUpdateNextButtonTitle?(R.string.localizable.next())
             }
             
             didUpdatePageControl?(currentPage)
@@ -33,18 +33,18 @@ final class OnboardingViewModel {
     private let cellViewModels: [OnboardingCellViewModel] = [
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingFirst,
-            title: "onboarding_first_title".localized(),
-            subtitle: "onboarding_first_subtitle".localized()
+            title: R.string.localizable.onboardingFirstTitle(),
+            subtitle: R.string.localizable.onboardingFirstSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingSecond,
-            title: "onboarding_second_title".localized(),
-            subtitle: "onboarding_second_subtitle".localized()
+            title: R.string.localizable.onboardingSecondTitle(),
+            subtitle: R.string.localizable.onboardingSecondSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingThird,
-            title: "onboarding_third_title".localized(),
-            subtitle: "onboarding_third_subtitle".localized()
+            title: R.string.localizable.onboardingThirdTitle(),
+            subtitle: R.string.localizable.onboardingThirdSubtitle()
         ))
     ]
     

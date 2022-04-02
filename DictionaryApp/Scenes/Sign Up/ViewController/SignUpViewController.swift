@@ -101,7 +101,7 @@ class SignUpViewController: BaseViewController {
             make.height.equalTo(Dimensions.standartHeight)
         }
         
-        nextButton.configure(withTitle: "sign_up".localized())
+        nextButton.configure(withTitle: R.string.localizable.signUp())
         nextButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
     }
     
@@ -122,5 +122,5 @@ class SignUpViewController: BaseViewController {
 
 // MARK: - Dimensions
 private extension Dimensions {
-    static let signUpTopicViewAspectRatio = 0.88
+    static let signUpTopicViewAspectRatio = 0.93
 }

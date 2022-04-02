@@ -19,11 +19,11 @@ final class MeaningViewModel {
         example = NSMutableAttributedString(
             string: "Example: " + exampleString,
             attributes: [
-                .font: UIFont.rubik(.regular, size: Dimensions.subtitle)
+                .font: R.font.rubikRegular(size: Dimensions.subtitle) as Any
             ]
         )
         example?.addAttribute(.foregroundColor,
-                              value: Colors.lightBlue?.cgColor ?? UIColor.blue.cgColor,
+                              value: R.color.lightBlue()?.cgColor ?? UIColor.blue.cgColor,
                               range: NSRange(location: 0, length: 8))
     }
 }

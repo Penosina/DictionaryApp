@@ -14,7 +14,6 @@
 		CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */; };
 		CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */; };
 		CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */; };
-		CE24CFAF27D67968009EA264 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAE27D67968009EA264 /* Colors.swift */; };
 		CE24CFB127D6869B009EA264 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB027D6869B009EA264 /* Errors.swift */; };
 		CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB227D695DD009EA264 /* CustomPageControl.swift */; };
 		CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB427D69F70009EA264 /* TopicView.swift */; };
@@ -57,6 +56,7 @@
 		CE24D03027E51077009EA264 /* WordsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D02F27E51077009EA264 /* WordsRepository.swift */; };
 		CE24D03227E52EA5009EA264 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D03127E52EA5009EA264 /* CoreDataService.swift */; };
 		CE24D03627E73278009EA264 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24D03527E73278009EA264 /* AudioService.swift */; };
+		CE596BBD27F82398008EEF08 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE596BBC27F82398008EEF08 /* R.generated.swift */; };
 		CEF7793927F723EA0093103C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF7793B27F723EA0093103C /* Localizable.strings */; };
 		CEF7793F27F72D3D0093103C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7793E27F72D3D0093103C /* Strings.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
@@ -71,9 +71,7 @@
 		CEF78AF427D500D600A82A6F /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */; };
 		CEF78AF527D500D600A82A6F /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */; };
 		CEF78AF627D500D600A82A6F /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */; };
-		CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AF727D5024F00A82A6F /* Fonts.swift */; };
 		CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */; };
-		CEF78AFD27D5038400A82A6F /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFC27D5038400A82A6F /* String+localized.swift */; };
 		CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFE27D503A200A82A6F /* Dimensions.swift */; };
 		CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78B0027D519E600A82A6F /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -87,7 +85,6 @@
 		CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellView.swift; sourceTree = "<group>"; };
 		CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicInfo.swift; sourceTree = "<group>"; };
 		CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeRoundedButton.swift; sourceTree = "<group>"; };
-		CE24CFAE27D67968009EA264 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE24CFB027D6869B009EA264 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CE24CFB227D695DD009EA264 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		CE24CFB427D69F70009EA264 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
@@ -131,6 +128,7 @@
 		CE24D03527E73278009EA264 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CE24D03727E739A9009EA264 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CE24D03827E739A9009EA264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE596BBC27F82398008EEF08 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CEF7793A27F723EA0093103C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF7793E27F72D3D0093103C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,9 +145,7 @@
 		CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		CEF78AF727D5024F00A82A6F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		CEF78AFC27D5038400A82A6F /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		CEF78AFE27D503A200A82A6F /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		CEF78B0027D519E600A82A6F /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EBE1FA6FC164AFA36A5EBBCF /* Pods-DictionaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictionaryApp.release.xcconfig"; path = "Target Support Files/Pods-DictionaryApp/Pods-DictionaryApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -494,11 +490,9 @@
 		CEF78AE527D4FA7A00A82A6F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				CEF78AF727D5024F00A82A6F /* Fonts.swift */,
-				CEF78AFC27D5038400A82A6F /* String+localized.swift */,
+				CE596BBC27F82398008EEF08 /* R.generated.swift */,
 				CEF78AFE27D503A200A82A6F /* Dimensions.swift */,
 				CE24CFA027D521CE009EA264 /* Images.swift */,
-				CE24CFAE27D67968009EA264 /* Colors.swift */,
 				CE24CFB027D6869B009EA264 /* Errors.swift */,
 				CEF7793B27F723EA0093103C /* Localizable.strings */,
 				CEF7793E27F72D3D0093103C /* Strings.swift */,
@@ -568,6 +562,7 @@
 			buildConfigurationList = CEF78AE027D4F9A900A82A6F /* Build configuration list for PBXNativeTarget "DictionaryApp" */;
 			buildPhases = (
 				80B7266E7066367DFBD51C25 /* [CP] Check Pods Manifest.lock */,
+				CE596BBB27F822DB008EEF08 /* ShellScript */,
 				CEF78AC827D4F9A900A82A6F /* Sources */,
 				CEF78AC927D4F9A900A82A6F /* Frameworks */,
 				CEF78ACA27D4F9A900A82A6F /* Resources */,
@@ -677,6 +672,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DictionaryApp/Pods-DictionaryApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE596BBB27F822DB008EEF08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -685,7 +699,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE24CFC427DDA04E009EA264 /* CustomTextField.swift in Sources */,
-				CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */,
 				CE24D03227E52EA5009EA264 /* CoreDataService.swift in Sources */,
 				CE24CFFF27E284D4009EA264 /* Word.swift in Sources */,
 				CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */,
@@ -704,7 +717,6 @@
 				CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */,
 				CE24D02627E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift in Sources */,
 				CEF7793F27F72D3D0093103C /* Strings.swift in Sources */,
-				CEF78AFD27D5038400A82A6F /* String+localized.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
 				CE24D00527E46281009EA264 /* Repository.swift in Sources */,
 				CE24D02527E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift in Sources */,
@@ -717,6 +729,7 @@
 				CE24CFE527E23BA1009EA264 /* DictionaryViewController.swift in Sources */,
 				CE24CFC727DDA351009EA264 /* SignUpViewModel.swift in Sources */,
 				CE24D01C27E4EE65009EA264 /* CoreDataContextProvider.swift in Sources */,
+				CE596BBD27F82398008EEF08 /* R.generated.swift in Sources */,
 				CE24CFD827E23A4E009EA264 /* TabCoordinator.swift in Sources */,
 				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
 				CE24CFDD27E23B15009EA264 /* TrainingCoordinator.swift in Sources */,
@@ -724,7 +737,6 @@
 				CE24D02927E4F0EB009EA264 /* DBDefinition+CoreDataClass.swift in Sources */,
 				CE24CFFD27E28426009EA264 /* MeaningViewModel.swift in Sources */,
 				CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */,
-				CE24CFAF27D67968009EA264 /* Colors.swift in Sources */,
 				CE24D02A27E4F0EB009EA264 /* DBDefinition+CoreDataProperties.swift in Sources */,
 				CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */,
 				CE24CFFB27E2840F009EA264 /* MeaningView.swift in Sources */,

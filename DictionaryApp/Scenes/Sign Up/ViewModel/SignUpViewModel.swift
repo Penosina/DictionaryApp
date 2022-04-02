@@ -14,8 +14,8 @@ final class SignUpViewModel {
     
     private let signUpTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
         image: Images.signUpTopicViewImage,
-        title: "sign_up".localized(),
-        subtitle: "sign_up_topic_subtitle".localized()
+        title: R.string.localizable.signUp(),
+        subtitle: R.string.localizable.signUpTopicSubtitle()
     ))
     
     // MARK: - Public Methods

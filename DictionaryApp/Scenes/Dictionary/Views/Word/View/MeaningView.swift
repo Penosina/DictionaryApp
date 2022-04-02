@@ -19,7 +19,7 @@ class MeaningView: UIView {
         super.layoutSubviews()
         
         layer.borderWidth = 1
-        layer.borderColor = Colors.textFieldBorder?.cgColor
+        layer.borderColor = R.color.textFieldBorder()?.cgColor
         layer.cornerRadius = Dimensions.standart
     }
     
@@ -44,14 +44,14 @@ class MeaningView: UIView {
     }
     
     private func setupDefinitionLabel() {
-        definitionLabel.font = UIFont.rubik(.regular, size: Dimensions.subtitle)
+        definitionLabel.font = R.font.rubikRegular(size: Dimensions.subtitle)
         definitionLabel.textColor = .black
         definitionLabel.numberOfLines = 0
         definitionLabel.text = viewModel.definitionString
     }
     
     private func setupExampleLabel() {
-        exampleLabel.font = UIFont.rubik(.regular, size: Dimensions.subtitle)
+        exampleLabel.font = R.font.rubikRegular(size: Dimensions.subtitle)
         exampleLabel.numberOfLines = 0
         exampleLabel.attributedText = viewModel.example
     }

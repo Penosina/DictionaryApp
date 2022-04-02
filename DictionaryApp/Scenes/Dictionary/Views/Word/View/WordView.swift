@@ -63,18 +63,18 @@ class WordView: UIView {
     }
     
     private func setupWordLabel() {
-        wordLabel.font = UIFont.rubik(.medium, size: Dimensions.medium)
+        wordLabel.font = R.font.rubikMedium(size: Dimensions.medium)
         wordLabel.textColor = .black
     }
     
     private func setupWordTranscriptionLabel() {
-        wordTranscriptionLabel.font = UIFont.rubik(.regular, size: Dimensions.subtitle)
-        wordTranscriptionLabel.textColor = Colors.orange
+        wordTranscriptionLabel.font = R.font.rubikRegular(size: Dimensions.subtitle)
+        wordTranscriptionLabel.textColor = R.color.orange()
     }
     
     private func setupVolumeImageView() {
         volumeImageView.contentMode = .scaleAspectFit
-        volumeImageView.image = UIImage(named: Images.volume)
+        volumeImageView.image = R.image.volume()
         volumeImageView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(playSound))
@@ -92,13 +92,13 @@ class WordView: UIView {
     }
     
     private func setupPartOfSpeechLabel() {
-        partOfSpeechLabel.font = UIFont.rubik(.medium, size: Dimensions.premedium)
+        partOfSpeechLabel.font = R.font.rubikMedium(size: Dimensions.premedium)
         partOfSpeechLabel.textColor = .black
         partOfSpeechLabel.text = "Part Of Speech:"
     }
     
     private func setupPartOfSpeechValueLabel() {
-        partOfSpeechValueLabel.font = UIFont.rubik(.regular, size: Dimensions.subtitle)
+        partOfSpeechValueLabel.font = R.font.rubikRegular(size: Dimensions.subtitle)
         partOfSpeechLabel.textColor = .black
     }
     
@@ -108,7 +108,7 @@ class WordView: UIView {
             make.top.equalTo(secondStackView.snp.bottom).offset(Dimensions.standart)
         }
         
-        meaningsLabel.font = UIFont.rubik(.medium, size: Dimensions.premedium)
+        meaningsLabel.font = R.font.rubikMedium(size: Dimensions.premedium)
         meaningsLabel.textColor = .black
         meaningsLabel.text = "Meanings:"
     }

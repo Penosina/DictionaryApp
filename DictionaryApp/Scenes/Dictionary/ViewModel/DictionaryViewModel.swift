@@ -9,8 +9,8 @@ final class DictionaryViewModel {
     
     private let plugTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
         image: Images.plug,
-        title: "plug_title".localized(),
-        subtitle: "plug_subtitle".localized()
+        title: R.string.localizable.plugTitle(),
+        subtitle: R.string.localizable.plugSubtitle()
     ))
     private var wordViewModel: WordViewModel? {
         didSet {

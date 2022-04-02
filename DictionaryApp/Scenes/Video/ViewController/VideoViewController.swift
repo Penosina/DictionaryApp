@@ -22,8 +22,8 @@ class VideoViewController: BaseViewController {
             make.center.equalToSuperview()
         }
         
-        titleLabel.font = .rubik(.bold, size: Dimensions.large)
-        titleLabel.text = "coming_soon".localized()
+        titleLabel.font = R.font.rubikBold(size: Dimensions.large)
+        titleLabel.text = R.string.localizable.comingSoon()
     }
     
     required init?(coder: NSCoder) {

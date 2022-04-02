@@ -38,12 +38,7 @@ class SearchTextField: CustomTextField {
                                                           action: #selector(search))
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: Images.search)
+        imageView.image = R.image.searchIcon()
         imageView.addGestureRecognizer(tapGestureRecognizer)
     }
-}
-
-// MARK: - Images
-private extension Images {
-    static let search = "searchIcon"
 }
