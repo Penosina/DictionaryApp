@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
     func showAlert(text: String?) {
         let alert = UIAlertController(title: text, message: nil, preferredStyle: .alert)
         alert.setValue(NSAttributedString(string: text ?? "", attributes: [
-            .font : UIFont.rubik(.regular, size: CGFloat(Dimensions.standart))
+            .font : UIFont.rubik(.regular, size: Dimensions.standart)
         ]), forKey: Strings.alertKey)
         let okAction = UIAlertAction(title: Strings.ok, style: .default, handler: nil)
         alert.view.tintColor = .black

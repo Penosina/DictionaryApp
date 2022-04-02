@@ -9,6 +9,6 @@ extension UIFont {
     
     static func rubik(_ type: FontType = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
         return UIFont(name: "Rubik\(type.rawValue)", size: size) ??
-               .systemFont(ofSize: size)
+            .systemFont(ofSize: size)
     }
 }
