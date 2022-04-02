@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - OnboardingViewModelDelegate
 protocol OnboardingViewModelDelegate: AnyObject {
-    func showRegistrationScene()
+    func showSignUpScene()
 }
 
 final class OnboardingViewModel {
@@ -62,12 +62,12 @@ final class OnboardingViewModel {
     }
     
     func showRegistrationScene() {
-        delegate?.showRegistrationScene()
+        delegate?.showSignUpScene()
     }
     
     func showNextPageOrNextScene() {
         if currentPage == numberOfCells - 1 {
-            delegate?.showRegistrationScene()
+            delegate?.showSignUpScene()
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)

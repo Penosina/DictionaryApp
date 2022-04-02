@@ -1,3 +1,3 @@
 struct Dependencies {
-    let networkManager: NetworkManager
+    let networkManager: APIService
 }

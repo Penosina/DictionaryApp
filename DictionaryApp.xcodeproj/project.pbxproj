@@ -30,7 +30,7 @@
 		CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE727D4FAB700A82A6F /* Coordinator.swift */; };
 		CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */; };
 		CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */; };
-		CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */; };
+		CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AED27D4FB5200A82A6F /* APIService.swift */; };
 		CEF78AF427D500D600A82A6F /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */; };
 		CEF78AF527D500D600A82A6F /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */; };
 		CEF78AF627D500D600A82A6F /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */; };
@@ -67,7 +67,7 @@
 		CEF78AE727D4FAB700A82A6F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CEF78AED27D4FB5200A82A6F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
@@ -179,6 +179,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CE596BC527F83A64008EEF08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE596BC627F83A6B008EEF08 /* APIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE596BC627F83A6B008EEF08 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				CEF78AED27D4FB5200A82A6F /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		CEF78AC327D4F9A900A82A6F = {
 			isa = PBXGroup;
 			children = (
@@ -215,10 +231,10 @@
 		CEF78AE327D4FA7000A82A6F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				CE596BC527F83A64008EEF08 /* Services */,
 				CEF78AE727D4FAB700A82A6F /* Coordinator.swift */,
 				CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */,
 				CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */,
-				CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -450,7 +466,7 @@
 				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
 				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
 				CE24CFA127D521CE009EA264 /* Images.swift in Sources */,
-				CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */,
+				CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */,
 				CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */,
 				CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */,
 				CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */,

@@ -11,7 +11,7 @@ final class AppCoordinator: Coordinator {
     init(window: UIWindow?) {
         self.window = window
         childCoordinators = []
-        dependencies = Dependencies(networkManager: NetworkManager())
+        dependencies = Dependencies(networkManager: APIService())
         rootNavigationController = UINavigationController()
         rootNavigationController.setNavigationBarHidden(true, animated: false)
     }
