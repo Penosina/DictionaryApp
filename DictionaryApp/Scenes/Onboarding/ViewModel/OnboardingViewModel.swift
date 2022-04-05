@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - OnboardingViewModelDelegate
 protocol OnboardingViewModelDelegate: AnyObject {
-    func showRegistrationScene()
+    func showSignUpScene()
 }
 
 final class OnboardingViewModel {
@@ -16,9 +16,9 @@ final class OnboardingViewModel {
     var currentPage: Int = 0 {
         didSet {
             if currentPage == numberOfCells - 1 {
-                didUpdateNextButtonTitle?(Strings.letsStart)
+                didUpdateNextButtonTitle?(R.string.localizable.letsStart())
             } else {
-                didUpdateNextButtonTitle?(Strings.next)
+                didUpdateNextButtonTitle?(R.string.localizable.next())
             }
             
             didUpdatePageControl?(currentPage)
@@ -32,19 +32,19 @@ final class OnboardingViewModel {
     
     private let cellViewModels: [OnboardingCellViewModel] = [
         OnboardingCellViewModel(topicInfo: TopicInfo(
-            image: UIImage(named: Images.onboardingFirst) ?? UIImage(),
-            title: Strings.onboardingFirstTitle,
-            subtitle: Strings.onboardingFirstSubtitle
+            image: Images.onboardingFirst,
+            title: R.string.localizable.onboardingFirstTitle(),
+            subtitle: R.string.localizable.onboardingThirdSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
-            image: UIImage(named: Images.onboardingSecond) ?? UIImage(),
-            title: Strings.onboardingSecondTitle,
-            subtitle: Strings.onboardingSecondSubtitle
+            image: Images.onboardingSecond,
+            title: R.string.localizable.onboardingSecondTitle(),
+            subtitle: R.string.localizable.onboardingSecondSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
-            image: UIImage(named: Images.onboardingThird) ?? UIImage(),
-            title: Strings.onboardingThirdTitle,
-            subtitle: Strings.onboardingThirdSubtitle
+            image: Images.onboardingThird,
+            title: R.string.localizable.onboardingThirdTitle(),
+            subtitle: R.string.localizable.onboardingThirdSubtitle()
         ))
     ]
     
@@ -62,12 +62,12 @@ final class OnboardingViewModel {
     }
     
     func showRegistrationScene() {
-        delegate?.showRegistrationScene()
+        delegate?.showSignUpScene()
     }
     
     func showNextPageOrNextScene() {
         if currentPage == numberOfCells - 1 {
-            delegate?.showRegistrationScene()
+            delegate?.showSignUpScene()
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
@@ -86,14 +86,4 @@ private extension Images {
     static let onboardingFirst = "onboardingFirst"
     static let onboardingSecond = "onboardingSecond"
     static let onboardingThird = "onboardingThird"
-}
-
-// MARK: - Strings
-private extension Strings {
-    static let onboardingFirstTitle = "Learn anytime and anywhere"
-    static let onboardingFirstSubtitle = "Quarantine is the perfect time to spend your day learning something new, from anywhere!"
-    static let onboardingSecondTitle = "Find a course for you"
-    static let onboardingSecondSubtitle = "Quarantine is the perfect time to spend your day learning something new, from anywhere!"
-    static let onboardingThirdTitle = "Improve your skills"
-    static let onboardingThirdSubtitle = "Quarantine is the perfect time to spend your day learning something new, from anywhere!"
 }

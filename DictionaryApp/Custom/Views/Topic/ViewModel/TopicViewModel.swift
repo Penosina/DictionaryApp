@@ -16,7 +16,7 @@ final class TopicViewModel {
     
     // MARK: - Public Methods
     func setup() {
-        image = topicInfo.image
+        image = UIImage(named: topicInfo.image)
         title = topicInfo.title
         subtitle = topicInfo.subtitle
         

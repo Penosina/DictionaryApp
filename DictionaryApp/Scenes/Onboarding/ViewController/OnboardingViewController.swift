@@ -57,9 +57,9 @@ class OnboardingViewController: BaseViewController {
             make.trailing.equalToSuperview().inset(Dimensions.standart)
         }
         
-        skipButton.titleLabel?.font = UIFont.rubik(.medium, size: Dimensions.subtitle)
-        skipButton.setTitleColor(Colors.gray, for: .normal)
-        skipButton.setTitle(Strings.skip, for: .normal)
+        skipButton.titleLabel?.font = R.font.rubikMedium(size: Dimensions.subtitle) 
+        skipButton.setTitleColor(R.color.gray(), for: .normal)
+        skipButton.setTitle(R.string.localizable.skip(), for: .normal)
         skipButton.addTarget(self, action: #selector(skipOnboardingScene), for: .touchUpInside)
     }
     
@@ -82,8 +82,8 @@ class OnboardingViewController: BaseViewController {
         }
         
         pageControl.numberOfPages = 3
-        pageControl.currentPageIndicatorTintColor = Colors.lightBlue
-        pageControl.pageIndicatorTintColor = Colors.lightGray
+        pageControl.currentPageIndicatorTintColor = R.color.lightBlue()
+        pageControl.pageIndicatorTintColor = R.color.lightGray()
         pageControl.isUserInteractionEnabled = false
     }
     
@@ -94,7 +94,7 @@ class OnboardingViewController: BaseViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.standart)
         }
         
-        nextButton.configure(withTitle: Strings.next)
+        nextButton.configure(withTitle: R.string.localizable.next())
         nextButton.addTarget(self, action: #selector(showNextPageOrNextScene), for: .touchUpInside)
     }
     
@@ -158,11 +158,10 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Strings
 private extension Strings {
-    static let skip = "Skip"
     static let reuseIdentifier = String(describing: OnboardingCellView.self)
 }
 
 // MARK: - Dimensions
 private extension Dimensions {
-    static let collectionViewAspectRatio = 1.0838
+    static let collectionViewAspectRatio = 1.12
 }

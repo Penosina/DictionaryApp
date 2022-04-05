@@ -6,7 +6,7 @@ enum Errors: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .indexOutOfRange:
-            return "Index out of range"
+            return R.string.localizable.indexOutOfRange()
         }
     }
 }

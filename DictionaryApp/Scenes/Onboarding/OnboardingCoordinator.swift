@@ -32,7 +32,7 @@ final class OnboardingCoordinator: Coordinator {
 
 // MARK: - OnboardingViewModelDelegate
 extension OnboardingCoordinator: OnboardingViewModelDelegate {
-    func showRegistrationScene() {
+    func showSignUpScene() {
         delegate?.removeOnboardingCoordinatorAndShowSignUpScene(onboardingCoordinator: self)
     }
 }

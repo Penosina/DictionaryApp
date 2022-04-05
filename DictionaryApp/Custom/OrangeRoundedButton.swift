@@ -22,10 +22,10 @@ class OrangeRoundedButton: UIButton {
     
     // MARK: - Private Methods
     private func setup() {
-        backgroundColor = Colors.orange
-        tintColor = Colors.orange
+        backgroundColor = R.color.orange()
+        tintColor = R.color.orange()
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.rubik(.medium, size: Dimensions.standart)
+        titleLabel?.font = R.font.rubikMedium(size: Dimensions.standart)
     }
     
     required init?(coder: NSCoder) {

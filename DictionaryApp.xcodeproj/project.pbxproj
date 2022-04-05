@@ -14,13 +14,14 @@
 		CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */; };
 		CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */; };
 		CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */; };
-		CE24CFAF27D67968009EA264 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAE27D67968009EA264 /* Colors.swift */; };
 		CE24CFB127D6869B009EA264 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB027D6869B009EA264 /* Errors.swift */; };
 		CE24CFB327D695DD009EA264 /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB227D695DD009EA264 /* BasePageControl.swift */; };
 		CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB427D69F70009EA264 /* TopicView.swift */; };
 		CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */; };
 		CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */; };
 		CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFC127D6A75D009EA264 /* SignUpViewController.swift */; };
+		CE596BC127F83436008EEF08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE596BC027F83436008EEF08 /* Localizable.strings */; };
+		CE596BC427F83613008EEF08 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE596BC327F83613008EEF08 /* R.generated.swift */; };
 		CEF78AD027D4F9A900A82A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */; };
 		CEF78AD227D4F9A900A82A6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */; };
 		CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AD327D4F9A900A82A6F /* OnboardingViewController.swift */; };
@@ -29,11 +30,10 @@
 		CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE727D4FAB700A82A6F /* Coordinator.swift */; };
 		CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */; };
 		CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */; };
-		CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */; };
+		CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AED27D4FB5200A82A6F /* APIService.swift */; };
 		CEF78AF427D500D600A82A6F /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */; };
 		CEF78AF527D500D600A82A6F /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */; };
 		CEF78AF627D500D600A82A6F /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */; };
-		CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AF727D5024F00A82A6F /* Fonts.swift */; };
 		CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */; };
 		CEF78AFD27D5038400A82A6F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFC27D5038400A82A6F /* Strings.swift */; };
 		CEF78AFF27D503A200A82A6F /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF78AFE27D503A200A82A6F /* Dimensions.swift */; };
@@ -49,13 +49,14 @@
 		CE24CFA727D665F2009EA264 /* OnboardingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellView.swift; sourceTree = "<group>"; };
 		CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicInfo.swift; sourceTree = "<group>"; };
 		CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeRoundedButton.swift; sourceTree = "<group>"; };
-		CE24CFAE27D67968009EA264 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE24CFB027D6869B009EA264 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CE24CFB227D695DD009EA264 /* BasePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
 		CE24CFB427D69F70009EA264 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
 		CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewModel.swift; sourceTree = "<group>"; };
 		CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		CE24CFC127D6A75D009EA264 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE596BC027F83436008EEF08 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CE596BC327F83613008EEF08 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF78AD127D4F9A900A82A6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,11 +67,10 @@
 		CEF78AE727D4FAB700A82A6F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CEF78AED27D4FB5200A82A6F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CEF78AF127D500D600A82A6F /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		CEF78AF227D500D600A82A6F /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		CEF78AF327D500D600A82A6F /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		CEF78AF727D5024F00A82A6F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CEF78AFC27D5038400A82A6F /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		CEF78AFE27D503A200A82A6F /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
@@ -179,6 +179,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CE596BC527F83A64008EEF08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE596BC627F83A6B008EEF08 /* APIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE596BC627F83A6B008EEF08 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				CEF78AED27D4FB5200A82A6F /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		CEF78AC327D4F9A900A82A6F = {
 			isa = PBXGroup;
 			children = (
@@ -215,10 +231,10 @@
 		CEF78AE327D4FA7000A82A6F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				CE596BC527F83A64008EEF08 /* Services */,
 				CEF78AE727D4FAB700A82A6F /* Coordinator.swift */,
 				CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */,
 				CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */,
-				CEF78AED27D4FB5200A82A6F /* NetworkManager.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -236,12 +252,12 @@
 		CEF78AE527D4FA7A00A82A6F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				CEF78AF727D5024F00A82A6F /* Fonts.swift */,
+				CE596BC327F83613008EEF08 /* R.generated.swift */,
 				CEF78AFC27D5038400A82A6F /* Strings.swift */,
 				CEF78AFE27D503A200A82A6F /* Dimensions.swift */,
 				CE24CFA027D521CE009EA264 /* Images.swift */,
-				CE24CFAE27D67968009EA264 /* Colors.swift */,
 				CE24CFB027D6869B009EA264 /* Errors.swift */,
+				CE596BC027F83436008EEF08 /* Localizable.strings */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -307,6 +323,7 @@
 			buildConfigurationList = CEF78AE027D4F9A900A82A6F /* Build configuration list for PBXNativeTarget "DictionaryApp" */;
 			buildPhases = (
 				80B7266E7066367DFBD51C25 /* [CP] Check Pods Manifest.lock */,
+				CE596BC227F83593008EEF08 /* ShellScript */,
 				CEF78AC827D4F9A900A82A6F /* Sources */,
 				CEF78AC927D4F9A900A82A6F /* Frameworks */,
 				CEF78ACA27D4F9A900A82A6F /* Resources */,
@@ -360,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF78ADC27D4F9A900A82A6F /* LaunchScreen.storyboard in Resources */,
+				CE596BC127F83436008EEF08 /* Localizable.strings in Resources */,
 				CEF78AF527D500D600A82A6F /* Rubik-Bold.ttf in Resources */,
 				CEF78AF427D500D600A82A6F /* Rubik-Regular.ttf in Resources */,
 				CEF78AD927D4F9A900A82A6F /* Assets.xcassets in Resources */,
@@ -409,6 +427,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DictionaryApp/Pods-DictionaryApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE596BC227F83593008EEF08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -416,7 +453,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */,
 				CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */,
 				CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */,
 				CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */,
@@ -430,11 +466,11 @@
 				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
 				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
 				CE24CFA127D521CE009EA264 /* Images.swift in Sources */,
-				CEF78AEE27D4FB5200A82A6F /* NetworkManager.swift in Sources */,
-				CE24CFAF27D67968009EA264 /* Colors.swift in Sources */,
+				CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */,
 				CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */,
 				CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */,
 				CEF78AFB27D5031C00A82A6F /* BaseViewController.swift in Sources */,
+				CE596BC427F83613008EEF08 /* R.generated.swift in Sources */,
 				CEF78AEA27D4FAF900A82A6F /* AppCoordinator.swift in Sources */,
 				CE24CFB127D6869B009EA264 /* Errors.swift in Sources */,
 				CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */,
