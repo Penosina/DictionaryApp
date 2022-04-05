@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "tpkeyboardavoiding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/michaeltyson/TPKeyboardAvoiding.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3217d6287a6b0ecb1db65a214a2e0fba9934e417"
+      }
+    }
+  ],
+  "version" : 2
+}
