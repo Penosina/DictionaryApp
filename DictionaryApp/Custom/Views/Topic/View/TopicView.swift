@@ -3,15 +3,13 @@ import UIKit
 class TopicView: UIView {
     // MARK: - Properties
     private let centerImageView = UIImageView()
-    private let containerView = UIView()
+    private let containerView = UIStackView()
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
     private var viewModel: TopicViewModel?
    
     // MARK: - Public Methods
     func configure(with viewModel: TopicViewModel) {
-        setup()
-        
         self.viewModel = viewModel
         bindToViewModel()
         self.viewModel?.setup()
@@ -43,10 +41,10 @@ class TopicView: UIView {
     
     private func setupContainerView() {
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(centerImageView.snp.bottom).offset(Dimensions.standart)
             make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalTo(centerImageView.snp.bottom).offset(Dimensions.standart)
         }
-    
+        
         containerView.axis = .vertical
         containerView.spacing = Dimensions.small
     }

@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
         
         alert.setValue(NSAttributedString(string: text ?? "",
                                           attributes: [
-            .font : R.font.rubikRegular(size: Dimensions.standart) as Any
+                                            .font : R.font.rubikRegular(size: Dimensions.standart) as Any
         ]), forKey: Strings.alertKey)
         
         let okAction = UIAlertAction(title: R.string.localizable.ok(),

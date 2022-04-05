@@ -12,10 +12,10 @@ final class SignUpViewModel {
     var didReceiveError: ((Error) -> Void)?
     var didUpdateData: ((TopicViewModel) -> Void)?
     
-    private let signUpTopicViewModel: TopicViewModel = TopicViewModel(topicInfo: TopicInfo(
-        image: UIImage(named: Images.signUpTopicViewImage) ?? UIImage(),
-        title: Strings.signUp,
-        subtitle: Strings.signUpTopicSubtitle
+    private let signUpTopicViewModel = TopicViewModel(topicInfo: TopicInfo(
+        image: Images.signUpTopicViewImage,
+        title: R.string.localizable.signUp(),
+        subtitle: R.string.localizable.signUpTopicSubtitle()
     ))
     
     // MARK: - Public Methods
@@ -24,11 +24,22 @@ final class SignUpViewModel {
     }
     
     func signUp(name: String?, email: String?, password: String?) {
-        guard
-            let name = name,
-            let email = email,
-            let password = password else {
-            didReceiveError?(Errors.hasEmptyFields)
+        
+        delegate?.showTabBar()
+        return
+        
+        guard let name = name else {
+            didReceiveError?(ValidationError.hasEmptyFields)
+            return
+        }
+        
+        guard let email = email else {
+            didReceiveError?(ValidationError.hasEmptyFields)
+            return
+        }
+        
+        guard let password = password else {
+            didReceiveError?(ValidationError.hasEmptyFields)
             return
         }
 
@@ -42,11 +53,6 @@ final class SignUpViewModel {
         
         delegate?.showTabBar()
     }
-}
-
-// MARK: - Strings
-private extension Strings {
-    static let signUpTopicSubtitle = "Create your account"
 }
 
 // MARK: - Images

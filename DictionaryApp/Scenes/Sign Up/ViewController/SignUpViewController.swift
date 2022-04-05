@@ -8,7 +8,7 @@ class SignUpViewController: BaseViewController {
     private let signUpTopicView = TopicView()
     private let nameTextField = CustomTextField()
     private let emailTextField = CustomTextField()
-    private let passwordTextField = CustomTextField()
+    private let passwordTextField = PasswordTextField()
     private let nextButton = OrangeRoundedButton()
     private let viewModel: SignUpViewModel
     
@@ -39,7 +39,7 @@ class SignUpViewController: BaseViewController {
         scrollView.addSubview(nameTextField)
         scrollView.addSubview(emailTextField)
         scrollView.addSubview(passwordTextField)
-        view.addSubview(nextButton)
+        scrollView.addSubview(nextButton)
         
         setupScrollView()
         setupSignUpTopicView()
@@ -52,7 +52,7 @@ class SignUpViewController: BaseViewController {
     private func setupScrollView() {
         scrollView.snp.makeConstraints { make in
             make.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(140)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
@@ -89,21 +89,19 @@ class SignUpViewController: BaseViewController {
         passwordTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(Dimensions.standart)
             make.top.equalTo(emailTextField.snp.bottom).offset(Dimensions.standart)
-            make.bottom.equalTo(scrollView.contentLayoutGuide).inset(Dimensions.standart)
             make.height.equalTo(Dimensions.standartHeight)
         }
-        
-        passwordTextField.configure(withState: .password)
     }
     
     private func setupNextButton() {
         nextButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(Dimensions.standart)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(Dimensions.nextButtonBottomAnchor)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(Dimensions.standart)
+            make.bottom.equalTo(scrollView.contentLayoutGuide).inset(Dimensions.standart)
             make.height.equalTo(Dimensions.standartHeight)
         }
         
-        nextButton.configure(withTitle: Strings.signUp)
+        nextButton.configure(withTitle: R.string.localizable.signUp())
         nextButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
     }
     
@@ -124,6 +122,5 @@ class SignUpViewController: BaseViewController {
 
 // MARK: - Dimensions
 private extension Dimensions {
-    static let signUpTopicViewAspectRatio = 0.88
-    static let nextButtonBottomAnchor = 67.0
+    static let signUpTopicViewAspectRatio = 0.93
 }

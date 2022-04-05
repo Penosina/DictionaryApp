@@ -1,4 +1,5 @@
 import UIKit
+import TPKeyboardAvoiding
 
 class OnboardingViewController: BaseViewController {
     // MARK: - Properties
@@ -57,7 +58,7 @@ class OnboardingViewController: BaseViewController {
             make.trailing.equalToSuperview().inset(Dimensions.standart)
         }
         
-        skipButton.titleLabel?.font = R.font.rubikMedium(size: Dimensions.subtitle) 
+        skipButton.titleLabel?.font = R.font.rubikMedium(size: Dimensions.subtitle)
         skipButton.setTitleColor(R.color.gray(), for: .normal)
         skipButton.setTitle(R.string.localizable.skip(), for: .normal)
         skipButton.addTarget(self, action: #selector(skipOnboardingScene), for: .touchUpInside)
@@ -65,7 +66,8 @@ class OnboardingViewController: BaseViewController {
     
     private func setupCollectionView() {
         collectionView.snp.makeConstraints { make in
-            make.leading.trailing.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(skipButton.snp.bottom).offset(Dimensions.standart)
             make.width.equalToSuperview()
             make.height.equalTo(collectionView.snp.width).multipliedBy(Dimensions.topicViewAspectRatio)
         }
@@ -159,9 +161,4 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Strings
 private extension Strings {
     static let reuseIdentifier = String(describing: OnboardingCellView.self)
-}
-
-// MARK: - Dimensions
-private extension Dimensions {
-    static let collectionViewAspectRatio = 1.12
 }

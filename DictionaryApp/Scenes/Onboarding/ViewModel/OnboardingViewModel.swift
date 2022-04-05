@@ -34,7 +34,7 @@ final class OnboardingViewModel {
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingFirst,
             title: R.string.localizable.onboardingFirstTitle(),
-            subtitle: R.string.localizable.onboardingThirdSubtitle()
+            subtitle: R.string.localizable.onboardingFirstSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingSecond,
@@ -79,7 +79,6 @@ final class OnboardingViewModel {
         self.currentPage = currentPage
     }
 }
-
 
 // MARK: - Images
 private extension Images {
