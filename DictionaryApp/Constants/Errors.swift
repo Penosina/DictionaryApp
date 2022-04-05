@@ -1,7 +1,7 @@
 import Foundation
 
 enum Errors: LocalizedError {
-    case indexOutOfRange
+    case indexOutOfRange, hasEmptyFields, emailValidation, passwordValidation, nameValidation
     
     var errorDescription: String? {
         switch self {

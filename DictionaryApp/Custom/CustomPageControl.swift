@@ -1,6 +1,6 @@
 import UIKit
 
-class BasePageControl: UIPageControl {
+class CustomPageControl: UIPageControl {
     // MARK: - Properties
     var currentPageImage: UIImage? = R.image.currentPageImage()
     var otherPagesImage: UIImage? = R.image.otherPagesImage()

@@ -3,7 +3,7 @@ import UIKit
 class TopicView: UIView {
     // MARK: - Properties
     private let centerImageView = UIImageView()
-    private let containerView = UIStackView()
+    private let containerView = UIView()
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
     private var viewModel: TopicViewModel?

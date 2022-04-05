@@ -15,7 +15,7 @@
 		CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */; };
 		CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */; };
 		CE24CFB127D6869B009EA264 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB027D6869B009EA264 /* Errors.swift */; };
-		CE24CFB327D695DD009EA264 /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB227D695DD009EA264 /* BasePageControl.swift */; };
+		CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB227D695DD009EA264 /* CustomPageControl.swift */; };
 		CE24CFB527D69F70009EA264 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFB427D69F70009EA264 /* TopicView.swift */; };
 		CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */; };
 		CE24CFC027D6A550009EA264 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */; };
@@ -51,7 +51,7 @@
 		CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicInfo.swift; sourceTree = "<group>"; };
 		CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeRoundedButton.swift; sourceTree = "<group>"; };
 		CE24CFB027D6869B009EA264 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		CE24CFB227D695DD009EA264 /* BasePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
+		CE24CFB227D695DD009EA264 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		CE24CFB427D69F70009EA264 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
 		CE24CFBA27D69F9C009EA264 /* TopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewModel.swift; sourceTree = "<group>"; };
 		CE24CFBF27D6A550009EA264 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE24CFCA27DDA81E009EA264 /* TPKeyboardAvoiding in Frameworks */,
 				73F2FD826AD0782D97C88B8E /* Pods_DictionaryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,17 +126,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CE24CFA927D66E53009EA264 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CE24CFB727D69F81009EA264 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFC527DDA29D009EA264 /* Model */,
 				CE24CFB927D69F8E009EA264 /* ViewModel */,
 				CE24CFB827D69F8A009EA264 /* View */,
 			);
@@ -177,6 +171,7 @@
 		CE24CFBE27D6A530009EA264 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFC627DDA351009EA264 /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,6 +239,7 @@
 		CEF78AE427D4FA7600A82A6F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CFCE27E21E23009EA264 /* New Group */,
 				CEF78AEF27D4FEBB00A82A6F /* Onboarding */,
 				CEF78AE627D4FA9E00A82A6F /* Sign Up */,
 				CEF78ADA27D4F9A900A82A6F /* LaunchScreen.storyboard */,
@@ -278,7 +274,6 @@
 		CEF78AEF27D4FEBB00A82A6F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CFA927D66E53009EA264 /* Model */,
 				CE24CFA227D6646C009EA264 /* View */,
 				CE24CF9D27D520D8009EA264 /* ViewModel */,
 				CE24CF9C27D520CB009EA264 /* ViewController */,
@@ -304,7 +299,8 @@
 				CEF78AF027D5008500A82A6F /* Fonts */,
 				CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */,
 				CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */,
-				CE24CFB227D695DD009EA264 /* BasePageControl.swift */,
+				CE24CFB227D695DD009EA264 /* CustomPageControl.swift */,
+				CE24CFC327DDA04E009EA264 /* CustomTextField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -337,6 +333,9 @@
 			dependencies = (
 			);
 			name = DictionaryApp;
+			packageProductDependencies = (
+				CE24CFC927DDA81E009EA264 /* TPKeyboardAvoiding */,
+			);
 			productName = DictionaryApp;
 			productReference = CEF78ACC27D4F9A900A82A6F /* DictionaryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -365,6 +364,9 @@
 				Base,
 			);
 			mainGroup = CEF78AC327D4F9A900A82A6F;
+			packageReferences = (
+				CE24CFC827DDA81E009EA264 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */,
+			);
 			productRefGroup = CEF78ACD27D4F9A900A82A6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,8 +458,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE24CFC427DDA04E009EA264 /* CustomTextField.swift in Sources */,
+				CEF78AF827D5024F00A82A6F /* Fonts.swift in Sources */,
 				CE24CFBB27D69F9C009EA264 /* TopicViewModel.swift in Sources */,
 				CE24CFAD27D67844009EA264 /* OrangeRoundedButton.swift in Sources */,
+				CE24CFCD27E21BED009EA264 /* Validator.swift in Sources */,
 				CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */,
 				CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */,
 				CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */,
@@ -468,6 +473,7 @@
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
 				CEF78AD427D4F9A900A82A6F /* OnboardingViewController.swift in Sources */,
 				CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */,
+				CE24CFC727DDA351009EA264 /* SignUpViewModel.swift in Sources */,
 				CE24CFAB27D66E6B009EA264 /* TopicInfo.swift in Sources */,
 				CE24CFA127D521CE009EA264 /* Images.swift in Sources */,
 				CEF78AEE27D4FB5200A82A6F /* APIService.swift in Sources */,
@@ -694,6 +700,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE24CFC827DDA81E009EA264 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michaeltyson/TPKeyboardAvoiding.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE24CFC927DDA81E009EA264 /* TPKeyboardAvoiding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE24CFC827DDA81E009EA264 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */;
+			productName = TPKeyboardAvoiding;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEF78AC427D4F9A900A82A6F /* Project object */;
 }
