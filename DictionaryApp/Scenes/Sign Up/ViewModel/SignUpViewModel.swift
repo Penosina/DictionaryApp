@@ -23,22 +23,11 @@ final class SignUpViewModel {
         didUpdateData?(signUpTopicViewModel)
     }
     
-    func signUp(name: String?, email: String?, password: String?) {
-        
-        delegate?.showTabBar()
-        return
-        
-        guard let name = name else {
-            didReceiveError?(ValidationError.hasEmptyFields)
-            return
-        }
-        
-        guard let email = email else {
-            didReceiveError?(ValidationError.hasEmptyFields)
-            return
-        }
-        
-        guard let password = password else {
+    func signUp(name: String?, email: String?, password: String?) {        
+        guard
+            let name = name,
+            let email = email,
+            let password = password else {
             didReceiveError?(ValidationError.hasEmptyFields)
             return
         }

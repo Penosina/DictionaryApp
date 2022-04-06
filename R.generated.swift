@@ -106,7 +106,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 6 colors.
+  /// This `R.color` struct is generated, and contains static references to 7 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
@@ -120,6 +120,8 @@ struct R: Rswift.Validatable {
     static let lightGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "lightGray")
     /// Color `orange`.
     static let orange = Rswift.ColorResource(bundle: R.hostingBundle, name: "orange")
+    /// Color `textFieldBorder`.
+    static let textFieldBorder = Rswift.ColorResource(bundle: R.hostingBundle, name: "textFieldBorder")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -175,6 +177,15 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "textFieldBorder", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func textFieldBorder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textFieldBorder, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
@@ -220,6 +231,14 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func orange(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.orange.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "textFieldBorder", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func textFieldBorder(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textFieldBorder.name)
     }
     #endif
 
@@ -289,10 +308,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
+    /// Image `closedEye`.
+    static let closedEye = Rswift.ImageResource(bundle: R.hostingBundle, name: "closedEye")
     /// Image `currentPageImage`.
     static let currentPageImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "currentPageImage")
+    /// Image `dictionaryIcon`.
+    static let dictionaryIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "dictionaryIcon")
+    /// Image `eye`.
+    static let eye = Rswift.ImageResource(bundle: R.hostingBundle, name: "eye")
     /// Image `onboardingFirst`.
     static let onboardingFirst = Rswift.ImageResource(bundle: R.hostingBundle, name: "onboardingFirst")
     /// Image `onboardingSecond`.
@@ -301,13 +326,46 @@ struct R: Rswift.Validatable {
     static let onboardingThird = Rswift.ImageResource(bundle: R.hostingBundle, name: "onboardingThird")
     /// Image `otherPagesImage`.
     static let otherPagesImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "otherPagesImage")
+    /// Image `plug`.
+    static let plug = Rswift.ImageResource(bundle: R.hostingBundle, name: "plug")
+    /// Image `searchIcon`.
+    static let searchIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "searchIcon")
+    /// Image `signUpImage`.
+    static let signUpImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "signUpImage")
     /// Image `splashScreenGirl`.
     static let splashScreenGirl = Rswift.ImageResource(bundle: R.hostingBundle, name: "splashScreenGirl")
+    /// Image `trainingIcon`.
+    static let trainingIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "trainingIcon")
+    /// Image `videoIcon`.
+    static let videoIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "videoIcon")
+    /// Image `volume`.
+    static let volume = Rswift.ImageResource(bundle: R.hostingBundle, name: "volume")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "closedEye", bundle: ..., traitCollection: ...)`
+    static func closedEye(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.closedEye, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "currentPageImage", bundle: ..., traitCollection: ...)`
     static func currentPageImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.currentPageImage, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "dictionaryIcon", bundle: ..., traitCollection: ...)`
+    static func dictionaryIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dictionaryIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "eye", bundle: ..., traitCollection: ...)`
+    static func eye(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.eye, compatibleWith: traitCollection)
     }
     #endif
 
@@ -340,9 +398,51 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "plug", bundle: ..., traitCollection: ...)`
+    static func plug(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.plug, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "searchIcon", bundle: ..., traitCollection: ...)`
+    static func searchIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.searchIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "signUpImage", bundle: ..., traitCollection: ...)`
+    static func signUpImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.signUpImage, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "splashScreenGirl", bundle: ..., traitCollection: ...)`
     static func splashScreenGirl(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.splashScreenGirl, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "trainingIcon", bundle: ..., traitCollection: ...)`
+    static func trainingIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.trainingIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "videoIcon", bundle: ..., traitCollection: ...)`
+    static func videoIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.videoIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "volume", bundle: ..., traitCollection: ...)`
+    static func volume(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.volume, compatibleWith: traitCollection)
     }
     #endif
 
@@ -383,66 +483,126 @@ struct R: Rswift.Validatable {
   struct string {
     /// This `R.string.localizable` struct is generated, and contains static references to 29 localization keys.
     struct localizable {
-      /// Value: Add to Dictionary
-      static let addToDictionary = Rswift.StringResource(key: "addToDictionary", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Coming Soon...
-      static let comingSoon = Rswift.StringResource(key: "comingSoon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Create your account
-      static let signUpTopicSubtitle = Rswift.StringResource(key: "signUpTopicSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Dictionary
-      static let dictionaryTabTitle = Rswift.StringResource(key: "dictionaryTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: E-mail
-      static let email = Rswift.StringResource(key: "email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Email should have @
-      static let emailValidation = Rswift.StringResource(key: "emailValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Find a course for you
-      static let onboardingSecondTitle = Rswift.StringResource(key: "onboardingSecondTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Improve your skills
-      static let onboardingThirdTitle = Rswift.StringResource(key: "onboardingThirdTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Index out of range
-      static let indexOutOfRange = Rswift.StringResource(key: "indexOutOfRange", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Input something to find it in dictionary
-      static let plugSubtitle = Rswift.StringResource(key: "plugSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Learn anytime and anywhere
-      static let onboardingFirstTitle = Rswift.StringResource(key: "onboardingFirstTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Let's Start
-      static let letsStart = Rswift.StringResource(key: "letsStart", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Name
-      static let name = Rswift.StringResource(key: "name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Name should be greater then 6 characters
-      static let nameValidation = Rswift.StringResource(key: "nameValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Next
-      static let next = Rswift.StringResource(key: "next", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: No such word in repository
-      static let noSuchWordInRepository = Rswift.StringResource(key: "noSuchWordInRepository", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: No word
-      static let plugTitle = Rswift.StringResource(key: "plugTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Ok
-      static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Password
-      static let password = Rswift.StringResource(key: "password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Password should be greater then 6 characters
-      static let passwordValidation = Rswift.StringResource(key: "passwordValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      static let onboardingFirstSubtitle = Rswift.StringResource(key: "onboardingFirstSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      static let onboardingSecondSubtitle = Rswift.StringResource(key: "onboardingSecondSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      static let onboardingThirdSubtitle = Rswift.StringResource(key: "onboardingThirdSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Sign up
-      static let signUp = Rswift.StringResource(key: "signUp", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Skip
-      static let skip = Rswift.StringResource(key: "skip", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: There are empty fields. Please fill it with data
-      static let emptyFields = Rswift.StringResource(key: "emptyFields", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Training
-      static let trainingTabTitle = Rswift.StringResource(key: "trainingTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Video
-      static let videoTabTitle = Rswift.StringResource(key: "videoTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Word is already in dictionary
-      static let alreadyInRepository = Rswift.StringResource(key: "alreadyInRepository", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// en translation: Add to Dictionary
+      ///
+      /// Locales: en
+      static let addToDictionary = Rswift.StringResource(key: "addToDictionary", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Coming Soon...
+      ///
+      /// Locales: en
+      static let comingSoon = Rswift.StringResource(key: "comingSoon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Create your account
+      ///
+      /// Locales: en
+      static let signUpTopicSubtitle = Rswift.StringResource(key: "signUpTopicSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Dictionary
+      ///
+      /// Locales: en
+      static let dictionaryTabTitle = Rswift.StringResource(key: "dictionaryTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: E-mail
+      ///
+      /// Locales: en
+      static let email = Rswift.StringResource(key: "email", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Email should have @
+      ///
+      /// Locales: en
+      static let emailValidation = Rswift.StringResource(key: "emailValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Find a course for you
+      ///
+      /// Locales: en
+      static let onboardingSecondTitle = Rswift.StringResource(key: "onboardingSecondTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Improve your skills
+      ///
+      /// Locales: en
+      static let onboardingThirdTitle = Rswift.StringResource(key: "onboardingThirdTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Index out of range
+      ///
+      /// Locales: en
+      static let indexOutOfRange = Rswift.StringResource(key: "indexOutOfRange", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Input something to find it in dictionary
+      ///
+      /// Locales: en
+      static let plugSubtitle = Rswift.StringResource(key: "plugSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Learn anytime and anywhere
+      ///
+      /// Locales: en
+      static let onboardingFirstTitle = Rswift.StringResource(key: "onboardingFirstTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Let's Start
+      ///
+      /// Locales: en
+      static let letsStart = Rswift.StringResource(key: "letsStart", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Name
+      ///
+      /// Locales: en
+      static let name = Rswift.StringResource(key: "name", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Name should be greater then 6 characters
+      ///
+      /// Locales: en
+      static let nameValidation = Rswift.StringResource(key: "nameValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Next
+      ///
+      /// Locales: en
+      static let next = Rswift.StringResource(key: "next", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: No such word in repository
+      ///
+      /// Locales: en
+      static let noSuchWordInRepository = Rswift.StringResource(key: "noSuchWordInRepository", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: No word
+      ///
+      /// Locales: en
+      static let plugTitle = Rswift.StringResource(key: "plugTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Ok
+      ///
+      /// Locales: en
+      static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Password
+      ///
+      /// Locales: en
+      static let password = Rswift.StringResource(key: "password", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Password should be greater then 6 characters
+      ///
+      /// Locales: en
+      static let passwordValidation = Rswift.StringResource(key: "passwordValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      ///
+      /// Locales: en
+      static let onboardingFirstSubtitle = Rswift.StringResource(key: "onboardingFirstSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      ///
+      /// Locales: en
+      static let onboardingSecondSubtitle = Rswift.StringResource(key: "onboardingSecondSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      ///
+      /// Locales: en
+      static let onboardingThirdSubtitle = Rswift.StringResource(key: "onboardingThirdSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Sign up
+      ///
+      /// Locales: en
+      static let signUp = Rswift.StringResource(key: "signUp", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Skip
+      ///
+      /// Locales: en
+      static let skip = Rswift.StringResource(key: "skip", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: There are empty fields. Please fill it with data
+      ///
+      /// Locales: en
+      static let emptyFields = Rswift.StringResource(key: "emptyFields", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Training
+      ///
+      /// Locales: en
+      static let trainingTabTitle = Rswift.StringResource(key: "trainingTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Video
+      ///
+      /// Locales: en
+      static let videoTabTitle = Rswift.StringResource(key: "videoTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Word is already in dictionary
+      ///
+      /// Locales: en
+      static let alreadyInRepository = Rswift.StringResource(key: "alreadyInRepository", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
-      /// Value: Add to Dictionary
+      /// en translation: Add to Dictionary
+      ///
+      /// Locales: en
       static func addToDictionary(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("addToDictionary", bundle: hostingBundle, comment: "")
@@ -455,7 +615,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("addToDictionary", bundle: bundle, comment: "")
       }
 
-      /// Value: Coming Soon...
+      /// en translation: Coming Soon...
+      ///
+      /// Locales: en
       static func comingSoon(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("comingSoon", bundle: hostingBundle, comment: "")
@@ -468,7 +630,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("comingSoon", bundle: bundle, comment: "")
       }
 
-      /// Value: Create your account
+      /// en translation: Create your account
+      ///
+      /// Locales: en
       static func signUpTopicSubtitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("signUpTopicSubtitle", bundle: hostingBundle, comment: "")
@@ -481,7 +645,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("signUpTopicSubtitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Dictionary
+      /// en translation: Dictionary
+      ///
+      /// Locales: en
       static func dictionaryTabTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("dictionaryTabTitle", bundle: hostingBundle, comment: "")
@@ -494,7 +660,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("dictionaryTabTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: E-mail
+      /// en translation: E-mail
+      ///
+      /// Locales: en
       static func email(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("email", bundle: hostingBundle, comment: "")
@@ -507,7 +675,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("email", bundle: bundle, comment: "")
       }
 
-      /// Value: Email should have @
+      /// en translation: Email should have @
+      ///
+      /// Locales: en
       static func emailValidation(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("emailValidation", bundle: hostingBundle, comment: "")
@@ -520,7 +690,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("emailValidation", bundle: bundle, comment: "")
       }
 
-      /// Value: Find a course for you
+      /// en translation: Find a course for you
+      ///
+      /// Locales: en
       static func onboardingSecondTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("onboardingSecondTitle", bundle: hostingBundle, comment: "")
@@ -533,7 +705,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("onboardingSecondTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Improve your skills
+      /// en translation: Improve your skills
+      ///
+      /// Locales: en
       static func onboardingThirdTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("onboardingThirdTitle", bundle: hostingBundle, comment: "")
@@ -546,7 +720,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("onboardingThirdTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Index out of range
+      /// en translation: Index out of range
+      ///
+      /// Locales: en
       static func indexOutOfRange(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("indexOutOfRange", bundle: hostingBundle, comment: "")
@@ -559,7 +735,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("indexOutOfRange", bundle: bundle, comment: "")
       }
 
-      /// Value: Input something to find it in dictionary
+      /// en translation: Input something to find it in dictionary
+      ///
+      /// Locales: en
       static func plugSubtitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("plugSubtitle", bundle: hostingBundle, comment: "")
@@ -572,7 +750,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("plugSubtitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Learn anytime and anywhere
+      /// en translation: Learn anytime and anywhere
+      ///
+      /// Locales: en
       static func onboardingFirstTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("onboardingFirstTitle", bundle: hostingBundle, comment: "")
@@ -585,7 +765,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("onboardingFirstTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Let's Start
+      /// en translation: Let's Start
+      ///
+      /// Locales: en
       static func letsStart(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("letsStart", bundle: hostingBundle, comment: "")
@@ -598,7 +780,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("letsStart", bundle: bundle, comment: "")
       }
 
-      /// Value: Name
+      /// en translation: Name
+      ///
+      /// Locales: en
       static func name(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("name", bundle: hostingBundle, comment: "")
@@ -611,7 +795,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("name", bundle: bundle, comment: "")
       }
 
-      /// Value: Name should be greater then 6 characters
+      /// en translation: Name should be greater then 6 characters
+      ///
+      /// Locales: en
       static func nameValidation(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("nameValidation", bundle: hostingBundle, comment: "")
@@ -624,7 +810,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("nameValidation", bundle: bundle, comment: "")
       }
 
-      /// Value: Next
+      /// en translation: Next
+      ///
+      /// Locales: en
       static func next(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("next", bundle: hostingBundle, comment: "")
@@ -637,7 +825,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("next", bundle: bundle, comment: "")
       }
 
-      /// Value: No such word in repository
+      /// en translation: No such word in repository
+      ///
+      /// Locales: en
       static func noSuchWordInRepository(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("noSuchWordInRepository", bundle: hostingBundle, comment: "")
@@ -650,7 +840,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("noSuchWordInRepository", bundle: bundle, comment: "")
       }
 
-      /// Value: No word
+      /// en translation: No word
+      ///
+      /// Locales: en
       static func plugTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("plugTitle", bundle: hostingBundle, comment: "")
@@ -663,7 +855,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("plugTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Ok
+      /// en translation: Ok
+      ///
+      /// Locales: en
       static func ok(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("ok", bundle: hostingBundle, comment: "")
@@ -676,7 +870,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("ok", bundle: bundle, comment: "")
       }
 
-      /// Value: Password
+      /// en translation: Password
+      ///
+      /// Locales: en
       static func password(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("password", bundle: hostingBundle, comment: "")
@@ -689,7 +885,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("password", bundle: bundle, comment: "")
       }
 
-      /// Value: Password should be greater then 6 characters
+      /// en translation: Password should be greater then 6 characters
+      ///
+      /// Locales: en
       static func passwordValidation(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("passwordValidation", bundle: hostingBundle, comment: "")
@@ -702,7 +900,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("passwordValidation", bundle: bundle, comment: "")
       }
 
-      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      ///
+      /// Locales: en
       static func onboardingFirstSubtitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("onboardingFirstSubtitle", bundle: hostingBundle, comment: "")
@@ -715,7 +915,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("onboardingFirstSubtitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      ///
+      /// Locales: en
       static func onboardingSecondSubtitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("onboardingSecondSubtitle", bundle: hostingBundle, comment: "")
@@ -728,7 +930,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("onboardingSecondSubtitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      ///
+      /// Locales: en
       static func onboardingThirdSubtitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("onboardingThirdSubtitle", bundle: hostingBundle, comment: "")
@@ -741,7 +945,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("onboardingThirdSubtitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Sign up
+      /// en translation: Sign up
+      ///
+      /// Locales: en
       static func signUp(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("signUp", bundle: hostingBundle, comment: "")
@@ -754,7 +960,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("signUp", bundle: bundle, comment: "")
       }
 
-      /// Value: Skip
+      /// en translation: Skip
+      ///
+      /// Locales: en
       static func skip(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("skip", bundle: hostingBundle, comment: "")
@@ -767,7 +975,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("skip", bundle: bundle, comment: "")
       }
 
-      /// Value: There are empty fields. Please fill it with data
+      /// en translation: There are empty fields. Please fill it with data
+      ///
+      /// Locales: en
       static func emptyFields(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("emptyFields", bundle: hostingBundle, comment: "")
@@ -780,7 +990,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("emptyFields", bundle: bundle, comment: "")
       }
 
-      /// Value: Training
+      /// en translation: Training
+      ///
+      /// Locales: en
       static func trainingTabTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("trainingTabTitle", bundle: hostingBundle, comment: "")
@@ -793,7 +1005,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("trainingTabTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Video
+      /// en translation: Video
+      ///
+      /// Locales: en
       static func videoTabTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("videoTabTitle", bundle: hostingBundle, comment: "")
@@ -806,7 +1020,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("videoTabTitle", bundle: bundle, comment: "")
       }
 
-      /// Value: Word is already in dictionary
+      /// en translation: Word is already in dictionary
+      ///
+      /// Locales: en
       static func alreadyInRepository(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("alreadyInRepository", bundle: hostingBundle, comment: "")
