@@ -1,12 +1,13 @@
 import Alamofire
 
-final class APIService: DictionaryService {
+final class APIService: DictionaryDataSource {
+    
     // MARK: - Properties
     private let baseURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-    private let reachibilityManager = NetworkReachabilityManager(host: "https://api.dictionaryapi.dev")
+    private static let reachibilityManager = NetworkReachabilityManager(host: "https://api.dictionaryapi.dev")
       
     // MARK: - Public Methods
-    func isConnected() -> Bool {
+    static func isConnected() -> Bool {
         reachibilityManager?.isReachable ?? false
     }
     
@@ -52,7 +53,8 @@ final class APIService: DictionaryService {
         }
     }
     
-    func addToRepository(word: Word) -> Void {
-        // skip
-    }
+    func addToRepository(word: Word) -> Void { }
+    
+    func getAll(_ onComplete: @escaping ([Word]) -> Void,
+                onError: @escaping (Error) -> Void) { }
 }

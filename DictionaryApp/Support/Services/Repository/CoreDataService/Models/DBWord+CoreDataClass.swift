@@ -23,7 +23,8 @@ public class DBWord: NSManagedObject {
         return Word(word: word,
                     phonetics: phoneticsTransient,
                     meanings: meaningsTransient,
-                    phonetic: phonetic)
+                    phonetic: phonetic,
+                    learnCoef: learnCoef)
     }
     
     static func from(transient: Word, inContext context: NSManagedObjectContext) -> DBWord {
@@ -38,6 +39,7 @@ public class DBWord: NSManagedObject {
             word = DBWord(context: context)
             word.word = transient.word
             word.phonetic = transient.phonetic
+            word.learnCoef = 0.0
             transient.phonetics?.forEach { phonetic in
                 word.addToPhonetics(DBPhonetic.from(transient: phonetic,
                                                     parent: transient,

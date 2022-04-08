@@ -8,6 +8,7 @@ struct Word: Codable {
     var phoneticString: String? {
         setupPhonetic(text: phonetic ?? "")
     }
+    var learnCoef: Double = 0.0
     
     private func setupPhonetic(text: String) -> String {
         guard text.count > 2 else {

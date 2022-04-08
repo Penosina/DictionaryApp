@@ -1,6 +1,7 @@
 import CoreData
 
-final class CoreDataService: DictionaryService {
+final class CoreDataService: DictionaryDataSource {
+    
     // MARK: - Properties
     private let context: NSManagedObjectContext
     
@@ -29,5 +30,21 @@ final class CoreDataService: DictionaryService {
     
     func addToRepository(word: Word) -> Void {
         let _ = DBWord.from(transient: word, inContext: context)
+    }
+    
+    func getAll(_ onComplete: @escaping ([Word]) -> Void,
+                onError: @escaping (Error) -> Void) {
+        let request: NSFetchRequest = DBWord.fetchRequest()
+        let dbWords: [DBWord] = (try? context.fetch(request)) ?? []
+        var words: [Word] = []
+        dbWords.forEach { dbWord in
+            do {
+                try words.append(dbWord.transient())
+            } catch {
+                onError(error)
+            }
+        }
+        
+        onComplete(words)
     }
 }

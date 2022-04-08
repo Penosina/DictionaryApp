@@ -1,24 +1,19 @@
 import Foundation
 import CoreData
 
-// MARK: - DictionaryService
-protocol DictionaryService {
-    func get(word: String, _ onComplete: @escaping (Word) -> Void, onError: @escaping (Error) -> Void)
-    func addToRepository(word: Word)
-}
-
-final class WordsRepository: DictionaryService {
+final class WordsRepository: Repository {
+    
     // MARK: - Properties
     private let coreDataContextProvider: CoreDataContextProvider = CoreDataContextProvider()
-    private let coreDataService: CoreDataService
-    private let remoteService: APIService
+    private let localService: DictionaryDataSource
+    private let remoteService: DictionaryDataSource
     private var context: NSManagedObjectContext {
         coreDataContextProvider.viewContext
     }
     
     // MARK: - Init
     init() {
-        coreDataService = CoreDataService(context: coreDataContextProvider.viewContext)
+        localService = CoreDataService(context: coreDataContextProvider.viewContext)
         remoteService = APIService()
     }
     
@@ -26,12 +21,12 @@ final class WordsRepository: DictionaryService {
     func get(word: String,
                 _ onComplete: @escaping (Word) -> Void,
                 onError: @escaping (Error) -> Void) {
-        let dictionaryService: DictionaryService
+        let dictionaryService: DictionaryDataSource
         
-        if remoteService.isConnected() {
+        if APIService.isConnected() {
             dictionaryService = remoteService
         } else {
-            dictionaryService = coreDataService
+            dictionaryService = localService
         }
         
         dictionaryService.get(word: word.lowercased()) { word in
@@ -41,8 +36,17 @@ final class WordsRepository: DictionaryService {
         }
     }
     
+    func getAll(_ onComplete: @escaping (_ words: [Word]) -> Void,
+                onError: @escaping (Error) -> Void) {
+        localService.getAll { words in
+            onComplete(words)
+        } onError: { error in
+            onError(error)
+        }
+    }
+    
     func addToRepository(word: Word) {
-        coreDataService.addToRepository(word: word)
+        localService.addToRepository(word: word)
         
         if context.hasChanges {
             try? context.save()
