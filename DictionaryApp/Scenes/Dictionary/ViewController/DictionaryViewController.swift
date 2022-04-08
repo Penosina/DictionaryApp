@@ -5,7 +5,7 @@ class DictionaryViewController: BaseViewController {
     // MARK: - Properties
     private let scrollView = TPKeyboardAvoidingScrollView()
     private let searchTextField = SearchTextField()
-    private let plugTopicView = TopicView()
+    private let placeholderTopicView = TopicView()
     private let wordView = WordView()
     private let addToDictionaryButton = OrangeRoundedButton()
     private let viewModel: DictionaryViewModel
@@ -33,7 +33,7 @@ class DictionaryViewController: BaseViewController {
     // MARK: - Private Methods
     private func setup() {
         view.addSubview(searchTextField)
-        view.addSubview(plugTopicView)
+        view.addSubview(placeholderTopicView)
         view.addSubview(scrollView)
         scrollView.addSubview(wordView)
         view.addSubview(addToDictionaryButton)
@@ -55,9 +55,9 @@ class DictionaryViewController: BaseViewController {
     }
     
     private func setupPlugTopicView() {
-        plugTopicView.snp.makeConstraints { make in
+        placeholderTopicView.snp.makeConstraints { make in
             make.leading.trailing.centerY.equalToSuperview()
-            make.height.equalTo(plugTopicView.snp.width).multipliedBy(Dimensions.plugAspectRatio)
+            make.height.equalTo(placeholderTopicView.snp.width).multipliedBy(Dimensions.plugAspectRatio)
         }
     }
     
@@ -84,7 +84,7 @@ class DictionaryViewController: BaseViewController {
             make.height.equalTo(Dimensions.standartHeight)
         }
         
-        addToDictionaryButton.configure(withTitle: R.string.localizable.addToDictionary())
+        addToDictionaryButton.configure(withTitle: R.string.dictionary.addToDictionary())
         addToDictionaryButton.addTarget(self,
                                         action: #selector(addToDictionary),
                                         for: .touchUpInside)
@@ -92,17 +92,17 @@ class DictionaryViewController: BaseViewController {
     
     private func bindToViewModel() {
         viewModel.didSetPlug = { [weak self] topicViewModel in
-            self?.plugTopicView.configure(with: topicViewModel)
+            self?.placeholderTopicView.configure(with: topicViewModel)
         }
         
         viewModel.didShowPlug = { [weak self] in
             self?.wordView.isHidden = true
             self?.addToDictionaryButton.isHidden = true
-            self?.plugTopicView.isHidden = false
+            self?.placeholderTopicView.isHidden = false
         }
         
         viewModel.didUpdateData = { [weak self] wordViewModel in
-            self?.plugTopicView.isHidden = true
+            self?.placeholderTopicView.isHidden = true
             self?.wordView.isHidden = false
             self?.addToDictionaryButton.isHidden = false
             self?.wordView.configure(with: wordViewModel)
@@ -127,6 +127,5 @@ extension DictionaryViewController: SearchTextFieldDelegate {
 
 // MARK: - Dimensions
 private extension Dimensions {
-    static let buttonHorizontalCostraint = 33.0
     static let plugAspectRatio = 0.92267
 }

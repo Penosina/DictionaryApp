@@ -2,18 +2,12 @@
 "letsStart" = "Let's Start";
 "signUp" = "Sign up";
 "comingSoon" = "Coming Soon...";
+
 "ok" = "Ok";
 "skip" = "Skip";
 "email" = "E-mail";
 "password" = "Password";
 "name" = "Name";
-
-"onboardingFirstTitle" = "Learn anytime and anywhere";
-"onboardingFirstSubtitle" = "Quarantine is the perfect time to spend your day learning something new, from anywhere!";
-"onboardingSecondTitle" = "Find a course for you";
-"onboardingSecondSubtitle" = "Quarantine is the perfect time to spend your day learning something new, from anywhere!";
-"onboardingThirdTitle" = "Improve your skills";
-"onboardingThirdSubtitle" = "Quarantine is the perfect time to spend your day learning something new, from anywhere!";
 
 "emptyFields" = "There are empty fields. Please fill it with data";
 "emailValidation" = "Email should have @";
@@ -28,6 +22,4 @@
 "videoTabTitle" = "Video";
 
 "signUpTopicSubtitle" = "Create your account";
-"plugTitle" = "No word";
-"plugSubtitle" = "Input something to find it in dictionary";
-"addToDictionary" = "Add to Dictionary";
+

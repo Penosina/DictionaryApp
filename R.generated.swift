@@ -308,7 +308,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 16 images.
   struct image {
     /// Image `closedEye`.
     static let closedEye = Rswift.ImageResource(bundle: R.hostingBundle, name: "closedEye")
@@ -334,6 +334,8 @@ struct R: Rswift.Validatable {
     static let signUpImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "signUpImage")
     /// Image `splashScreenGirl`.
     static let splashScreenGirl = Rswift.ImageResource(bundle: R.hostingBundle, name: "splashScreenGirl")
+    /// Image `trainingFinished`.
+    static let trainingFinished = Rswift.ImageResource(bundle: R.hostingBundle, name: "trainingFinished")
     /// Image `trainingIcon`.
     static let trainingIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "trainingIcon")
     /// Image `videoIcon`.
@@ -426,6 +428,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "trainingFinished", bundle: ..., traitCollection: ...)`
+    static func trainingFinished(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.trainingFinished, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "trainingIcon", bundle: ..., traitCollection: ...)`
     static func trainingIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.trainingIcon, compatibleWith: traitCollection)
@@ -479,14 +488,61 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 29 localization keys.
+    /// This `R.string.dictionary` struct is generated, and contains static references to 3 localization keys.
+    struct dictionary {
+      /// Value: Add to Dictionary
+      static let addToDictionary = Rswift.StringResource(key: "addToDictionary", tableName: "Dictionary", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Input something to find it in dictionary
+      static let placeholderSubtitle = Rswift.StringResource(key: "placeholderSubtitle", tableName: "Dictionary", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: No word
+      static let placeholderTitle = Rswift.StringResource(key: "placeholderTitle", tableName: "Dictionary", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Add to Dictionary
+      static func addToDictionary(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("addToDictionary", tableName: "Dictionary", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Dictionary", preferredLanguages: preferredLanguages) else {
+          return "addToDictionary"
+        }
+
+        return NSLocalizedString("addToDictionary", tableName: "Dictionary", bundle: bundle, comment: "")
+      }
+
+      /// Value: Input something to find it in dictionary
+      static func placeholderSubtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholderSubtitle", tableName: "Dictionary", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Dictionary", preferredLanguages: preferredLanguages) else {
+          return "placeholderSubtitle"
+        }
+
+        return NSLocalizedString("placeholderSubtitle", tableName: "Dictionary", bundle: bundle, comment: "")
+      }
+
+      /// Value: No word
+      static func placeholderTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholderTitle", tableName: "Dictionary", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Dictionary", preferredLanguages: preferredLanguages) else {
+          return "placeholderTitle"
+        }
+
+        return NSLocalizedString("placeholderTitle", tableName: "Dictionary", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    /// This `R.string.localizable` struct is generated, and contains static references to 20 localization keys.
     struct localizable {
-      /// en translation: Add to Dictionary
-      ///
-      /// Locales: en
-      static let addToDictionary = Rswift.StringResource(key: "addToDictionary", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Coming Soon...
       ///
       /// Locales: en
@@ -507,26 +563,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let emailValidation = Rswift.StringResource(key: "emailValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Find a course for you
-      ///
-      /// Locales: en
-      static let onboardingSecondTitle = Rswift.StringResource(key: "onboardingSecondTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Improve your skills
-      ///
-      /// Locales: en
-      static let onboardingThirdTitle = Rswift.StringResource(key: "onboardingThirdTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Index out of range
       ///
       /// Locales: en
       static let indexOutOfRange = Rswift.StringResource(key: "indexOutOfRange", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Input something to find it in dictionary
-      ///
-      /// Locales: en
-      static let plugSubtitle = Rswift.StringResource(key: "plugSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Learn anytime and anywhere
-      ///
-      /// Locales: en
-      static let onboardingFirstTitle = Rswift.StringResource(key: "onboardingFirstTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Let's Start
       ///
       /// Locales: en
@@ -547,10 +587,6 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let noSuchWordInRepository = Rswift.StringResource(key: "noSuchWordInRepository", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: No word
-      ///
-      /// Locales: en
-      static let plugTitle = Rswift.StringResource(key: "plugTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Ok
       ///
       /// Locales: en
@@ -563,18 +599,6 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let passwordValidation = Rswift.StringResource(key: "passwordValidation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      ///
-      /// Locales: en
-      static let onboardingFirstSubtitle = Rswift.StringResource(key: "onboardingFirstSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      ///
-      /// Locales: en
-      static let onboardingSecondSubtitle = Rswift.StringResource(key: "onboardingSecondSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      ///
-      /// Locales: en
-      static let onboardingThirdSubtitle = Rswift.StringResource(key: "onboardingThirdSubtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Sign up
       ///
       /// Locales: en
@@ -599,21 +623,6 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let alreadyInRepository = Rswift.StringResource(key: "alreadyInRepository", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-
-      /// en translation: Add to Dictionary
-      ///
-      /// Locales: en
-      static func addToDictionary(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("addToDictionary", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "addToDictionary"
-        }
-
-        return NSLocalizedString("addToDictionary", bundle: bundle, comment: "")
-      }
 
       /// en translation: Coming Soon...
       ///
@@ -690,36 +699,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("emailValidation", bundle: bundle, comment: "")
       }
 
-      /// en translation: Find a course for you
-      ///
-      /// Locales: en
-      static func onboardingSecondTitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("onboardingSecondTitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "onboardingSecondTitle"
-        }
-
-        return NSLocalizedString("onboardingSecondTitle", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Improve your skills
-      ///
-      /// Locales: en
-      static func onboardingThirdTitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("onboardingThirdTitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "onboardingThirdTitle"
-        }
-
-        return NSLocalizedString("onboardingThirdTitle", bundle: bundle, comment: "")
-      }
-
       /// en translation: Index out of range
       ///
       /// Locales: en
@@ -733,36 +712,6 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("indexOutOfRange", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Input something to find it in dictionary
-      ///
-      /// Locales: en
-      static func plugSubtitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("plugSubtitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "plugSubtitle"
-        }
-
-        return NSLocalizedString("plugSubtitle", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Learn anytime and anywhere
-      ///
-      /// Locales: en
-      static func onboardingFirstTitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("onboardingFirstTitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "onboardingFirstTitle"
-        }
-
-        return NSLocalizedString("onboardingFirstTitle", bundle: bundle, comment: "")
       }
 
       /// en translation: Let's Start
@@ -840,21 +789,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("noSuchWordInRepository", bundle: bundle, comment: "")
       }
 
-      /// en translation: No word
-      ///
-      /// Locales: en
-      static func plugTitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("plugTitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "plugTitle"
-        }
-
-        return NSLocalizedString("plugTitle", bundle: bundle, comment: "")
-      }
-
       /// en translation: Ok
       ///
       /// Locales: en
@@ -898,51 +832,6 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("passwordValidation", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      ///
-      /// Locales: en
-      static func onboardingFirstSubtitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("onboardingFirstSubtitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "onboardingFirstSubtitle"
-        }
-
-        return NSLocalizedString("onboardingFirstSubtitle", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      ///
-      /// Locales: en
-      static func onboardingSecondSubtitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("onboardingSecondSubtitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "onboardingSecondSubtitle"
-        }
-
-        return NSLocalizedString("onboardingSecondSubtitle", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Quarantine is the perfect time to spend your day learning something new, from anywhere!
-      ///
-      /// Locales: en
-      static func onboardingThirdSubtitle(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("onboardingThirdSubtitle", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "onboardingThirdSubtitle"
-        }
-
-        return NSLocalizedString("onboardingThirdSubtitle", bundle: bundle, comment: "")
       }
 
       /// en translation: Sign up
@@ -1033,6 +922,198 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("alreadyInRepository", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    /// This `R.string.onboarding` struct is generated, and contains static references to 6 localization keys.
+    struct onboarding {
+      /// Value: Find a course for you
+      static let secondTitle = Rswift.StringResource(key: "secondTitle", tableName: "Onboarding", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Improve your skills
+      static let thirdTitle = Rswift.StringResource(key: "thirdTitle", tableName: "Onboarding", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Learn anytime and anywhere
+      static let firstTitle = Rswift.StringResource(key: "firstTitle", tableName: "Onboarding", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      static let firstSubtitle = Rswift.StringResource(key: "firstSubtitle", tableName: "Onboarding", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      static let secondSubtitle = Rswift.StringResource(key: "secondSubtitle", tableName: "Onboarding", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      static let thirdSubtitle = Rswift.StringResource(key: "thirdSubtitle", tableName: "Onboarding", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Find a course for you
+      static func secondTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("secondTitle", tableName: "Onboarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Onboarding", preferredLanguages: preferredLanguages) else {
+          return "secondTitle"
+        }
+
+        return NSLocalizedString("secondTitle", tableName: "Onboarding", bundle: bundle, comment: "")
+      }
+
+      /// Value: Improve your skills
+      static func thirdTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("thirdTitle", tableName: "Onboarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Onboarding", preferredLanguages: preferredLanguages) else {
+          return "thirdTitle"
+        }
+
+        return NSLocalizedString("thirdTitle", tableName: "Onboarding", bundle: bundle, comment: "")
+      }
+
+      /// Value: Learn anytime and anywhere
+      static func firstTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("firstTitle", tableName: "Onboarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Onboarding", preferredLanguages: preferredLanguages) else {
+          return "firstTitle"
+        }
+
+        return NSLocalizedString("firstTitle", tableName: "Onboarding", bundle: bundle, comment: "")
+      }
+
+      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      static func firstSubtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("firstSubtitle", tableName: "Onboarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Onboarding", preferredLanguages: preferredLanguages) else {
+          return "firstSubtitle"
+        }
+
+        return NSLocalizedString("firstSubtitle", tableName: "Onboarding", bundle: bundle, comment: "")
+      }
+
+      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      static func secondSubtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("secondSubtitle", tableName: "Onboarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Onboarding", preferredLanguages: preferredLanguages) else {
+          return "secondSubtitle"
+        }
+
+        return NSLocalizedString("secondSubtitle", tableName: "Onboarding", bundle: bundle, comment: "")
+      }
+
+      /// Value: Quarantine is the perfect time to spend your day learning something new, from anywhere!
+      static func thirdSubtitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("thirdSubtitle", tableName: "Onboarding", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Onboarding", preferredLanguages: preferredLanguages) else {
+          return "thirdSubtitle"
+        }
+
+        return NSLocalizedString("thirdSubtitle", tableName: "Onboarding", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    /// This `R.string.training` struct is generated, and contains static references to 6 localization keys.
+    struct training {
+      /// Value:  word in your Dictionary.  Start the Training?
+      static let lastPartOneWord = Rswift.StringResource(key: "lastPartOneWord", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value:  words/nin your Dictionary.  Start the Training?
+      static let lastPartManyWords = Rswift.StringResource(key: "lastPartManyWords", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Add words to Dictionary
+      static let placeholder = Rswift.StringResource(key: "placeholder", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Start
+      static let startButtonTitle = Rswift.StringResource(key: "startButtonTitle", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: There are 
+      static let firstPartManyWords = Rswift.StringResource(key: "firstPartManyWords", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: There is 
+      static let firstPartOneWord = Rswift.StringResource(key: "firstPartOneWord", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value:  word in your Dictionary.  Start the Training?
+      static func lastPartOneWord(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("lastPartOneWord", tableName: "Training", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Training", preferredLanguages: preferredLanguages) else {
+          return "lastPartOneWord"
+        }
+
+        return NSLocalizedString("lastPartOneWord", tableName: "Training", bundle: bundle, comment: "")
+      }
+
+      /// Value:  words/nin your Dictionary.  Start the Training?
+      static func lastPartManyWords(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("lastPartManyWords", tableName: "Training", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Training", preferredLanguages: preferredLanguages) else {
+          return "lastPartManyWords"
+        }
+
+        return NSLocalizedString("lastPartManyWords", tableName: "Training", bundle: bundle, comment: "")
+      }
+
+      /// Value: Add words to Dictionary
+      static func placeholder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder", tableName: "Training", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Training", preferredLanguages: preferredLanguages) else {
+          return "placeholder"
+        }
+
+        return NSLocalizedString("placeholder", tableName: "Training", bundle: bundle, comment: "")
+      }
+
+      /// Value: Start
+      static func startButtonTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("startButtonTitle", tableName: "Training", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Training", preferredLanguages: preferredLanguages) else {
+          return "startButtonTitle"
+        }
+
+        return NSLocalizedString("startButtonTitle", tableName: "Training", bundle: bundle, comment: "")
+      }
+
+      /// Value: There are 
+      static func firstPartManyWords(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("firstPartManyWords", tableName: "Training", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Training", preferredLanguages: preferredLanguages) else {
+          return "firstPartManyWords"
+        }
+
+        return NSLocalizedString("firstPartManyWords", tableName: "Training", bundle: bundle, comment: "")
+      }
+
+      /// Value: There is 
+      static func firstPartOneWord(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("firstPartOneWord", tableName: "Training", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Training", preferredLanguages: preferredLanguages) else {
+          return "firstPartOneWord"
+        }
+
+        return NSLocalizedString("firstPartOneWord", tableName: "Training", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}
