@@ -106,12 +106,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 7 colors.
+  /// This `R.color` struct is generated, and contains static references to 10 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
     /// Color `gray`.
     static let gray = Rswift.ColorResource(bundle: R.hostingBundle, name: "gray")
+    /// Color `green`.
+    static let green = Rswift.ColorResource(bundle: R.hostingBundle, name: "green")
     /// Color `inkDark`.
     static let inkDark = Rswift.ColorResource(bundle: R.hostingBundle, name: "inkDark")
     /// Color `lightBlue`.
@@ -120,8 +122,12 @@ struct R: Rswift.Validatable {
     static let lightGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "lightGray")
     /// Color `orange`.
     static let orange = Rswift.ColorResource(bundle: R.hostingBundle, name: "orange")
+    /// Color `red`.
+    static let red = Rswift.ColorResource(bundle: R.hostingBundle, name: "red")
     /// Color `textFieldBorder`.
     static let textFieldBorder = Rswift.ColorResource(bundle: R.hostingBundle, name: "textFieldBorder")
+    /// Color `yellow`.
+    static let yellow = Rswift.ColorResource(bundle: R.hostingBundle, name: "yellow")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -138,6 +144,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func gray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.gray, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "green", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.green, compatibleWith: traitCollection)
     }
     #endif
 
@@ -178,11 +193,29 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "red", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func red(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.red, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "textFieldBorder", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func textFieldBorder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.textFieldBorder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "yellow", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func yellow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.yellow, compatibleWith: traitCollection)
     }
     #endif
 
@@ -199,6 +232,14 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func gray(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.gray.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "green", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func green(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.green.name)
     }
     #endif
 
@@ -235,10 +276,26 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
+    /// `UIColor(named: "red", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func red(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.red.name)
+    }
+    #endif
+
+    #if os(watchOS)
     /// `UIColor(named: "textFieldBorder", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func textFieldBorder(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.textFieldBorder.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "yellow", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func yellow(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.yellow.name)
     }
     #endif
 
@@ -1027,7 +1084,7 @@ struct R: Rswift.Validatable {
     struct training {
       /// Value:  word in your Dictionary.  Start the Training?
       static let lastPartOneWord = Rswift.StringResource(key: "lastPartOneWord", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value:  words/nin your Dictionary.  Start the Training?
+      /// Value:  words in your Dictionary.  Start the Training?
       static let lastPartManyWords = Rswift.StringResource(key: "lastPartManyWords", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Add words to Dictionary
       static let placeholder = Rswift.StringResource(key: "placeholder", tableName: "Training", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -1051,7 +1108,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lastPartOneWord", tableName: "Training", bundle: bundle, comment: "")
       }
 
-      /// Value:  words/nin your Dictionary.  Start the Training?
+      /// Value:  words in your Dictionary.  Start the Training?
       static func lastPartManyWords(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
           return NSLocalizedString("lastPartManyWords", tableName: "Training", bundle: hostingBundle, comment: "")

@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 protocol TrainingViewModelDelegate: AnyObject {
     func showQuestionScene()
@@ -10,6 +11,12 @@ final class TrainingViewModel {
         words.count
     }
     var trainingText: NSMutableAttributedString?
+    lazy var countdownViewModel: CountdownViewModel = {
+        let countdownViewModel = CountdownViewModel()
+        countdownViewModel.delegate = self
+        
+        return countdownViewModel
+    }()
     
     var didUpdateData: (() -> Void)?
     var didReceiveError: ((Error) -> Void)?
@@ -29,8 +36,8 @@ final class TrainingViewModel {
         getWords()
     }
     
-    func showQuestionScene() {
-        delegate?.showQuestionScene()
+    func didTappedStartButton() {
+        countdownViewModel.makeCount()
     }
     
     // MARK: - Private Methods
@@ -47,6 +54,7 @@ final class TrainingViewModel {
     private func getTrainingText() -> NSMutableAttributedString {
         let firstPart: String
         let lastPart: String
+        
         if wordsCount == 0 {
             return NSMutableAttributedString(string: R.string.training.placeholder())
         } else if wordsCount == 1 {
@@ -71,5 +79,12 @@ final class TrainingViewModel {
         mutableAttributedString.addAttribute(.foregroundColor, value: R.color.orange() as Any, range: range)
         
         return mutableAttributedString
+    }
+}
+
+// MARK: - CountdownViewModelDelegate
+extension TrainingViewModel: CountdownViewModelDelegate {
+    func showQuestionScene() {
+        delegate?.showQuestionScene()
     }
 }

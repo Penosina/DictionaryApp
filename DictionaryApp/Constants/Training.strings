@@ -2,5 +2,5 @@
 "firstPartOneWord" = "There is ";
 "firstPartManyWords" = "There are ";
 "lastPartOneWord" = " word\nin your Dictionary.\n\nStart the Training?";
-"lastPartManyWords" = " words/nin your Dictionary.\n\nStart the Training?";
+"lastPartManyWords" = " words\nin your Dictionary.\n\nStart the Training?";
 "placeholder" = "Add words to Dictionary";
