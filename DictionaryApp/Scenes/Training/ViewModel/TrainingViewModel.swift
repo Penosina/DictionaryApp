@@ -14,7 +14,6 @@ final class TrainingViewModel {
     lazy var countdownViewModel: CountdownViewModel = {
         let countdownViewModel = CountdownViewModel()
         countdownViewModel.delegate = self
-        
         return countdownViewModel
     }()
     
@@ -25,6 +24,7 @@ final class TrainingViewModel {
     
     private let dependencies: Dependencies
     private var words: [Word] = []
+    private var countdownHasStart: Bool = false
     
     // MARK: - Init
     init(dependencies: Dependencies) {
@@ -37,7 +37,15 @@ final class TrainingViewModel {
     }
     
     func didTappedStartButton() {
-        countdownViewModel.makeCount()
+        countdownHasStart = true
+        countdownViewModel.start()
+    }
+    
+    func resetCountdownIfNeeded() {
+        if countdownHasStart {
+            countdownViewModel.stopAnimation()
+            countdownHasStart = false
+        }
     }
     
     // MARK: - Private Methods

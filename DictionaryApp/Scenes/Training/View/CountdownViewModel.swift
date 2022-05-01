@@ -8,11 +8,12 @@ protocol CountdownViewModelDelegate: AnyObject {
 final class CountdownViewModel {
     // MARK: - Properties
     var didUpdateView: ((CountdownItem) -> Void)?
+    var didStopAnimation: (() -> Void)?
+    
     weak var delegate: CountdownViewModelDelegate?
     
-    let radius: CGFloat = 75.0
+    let radius: CGFloat = Dimensions.ringRadius
     
-    private let timer = Timer()
     private let countdownItems = [
         CountdownItem.five,
         CountdownItem.four,
@@ -22,18 +23,36 @@ final class CountdownViewModel {
         CountdownItem.go
     ]
     private lazy var countdownItemIterator = CountdownItemIterator(items: countdownItems)
+    private var timer: Timer?
     
-    // MARK: - Public Methods
-    func makeCount() {
+    // MARK: - Actions
+    @objc private func makeCount() {
         if let countdownItem = countdownItemIterator.next() {
             didUpdateView?(countdownItem)
         } else {
+            timer?.invalidate()
             delegate?.showQuestionScene()
         }
     }
     
-    // MARK: - Private Methods
-    private func oneSecondPassed() {
-        
+    // MARK: - Public Methods
+    func start() {
+        makeCount()
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(makeCount),
+                                     userInfo: nil,
+                                     repeats: true)
     }
+    
+    func stopAnimation() {
+        timer?.invalidate()
+        didStopAnimation?()
+        countdownItemIterator = CountdownItemIterator(items: countdownItems)
+    }
+}
+
+// MARK: - Dimensions
+private extension Dimensions {
+    static let ringRadius = 75.0
 }

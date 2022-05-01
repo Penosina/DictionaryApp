@@ -9,7 +9,7 @@ class TrainingViewController: BaseViewController {
     private let viewModel: TrainingViewModel
     
     // MARK: - Actions
-    @objc private func showQuestionScene() {
+    @objc private func didTappedStartButton() {
         startButton.isHidden = true
         countdownView.isHidden = false
         viewModel.didTappedStartButton()
@@ -32,7 +32,14 @@ class TrainingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        countdownView.isHidden = true
         viewModel.start()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        viewModel.resetCountdownIfNeeded()
     }
     
     // MARK: - Private Methods
@@ -77,7 +84,7 @@ class TrainingViewController: BaseViewController {
         
         startButton.configure(withTitle: R.string.training.startButtonTitle())
         startButton.addTarget(self,
-                              action: #selector(showQuestionScene),
+                              action: #selector(didTappedStartButton),
                               for: .touchUpInside)
     }
     
@@ -85,6 +92,7 @@ class TrainingViewController: BaseViewController {
         viewModel.didUpdateData = { [weak self] in
             self?.trainingTextLabel.attributedText = self?.viewModel.trainingText
             self?.startButton.isHidden = self?.viewModel.wordsCount == 0
+            self?.countdownView.isHidden = true
         }
         
         viewModel.didReceiveError = { [weak self] error in
