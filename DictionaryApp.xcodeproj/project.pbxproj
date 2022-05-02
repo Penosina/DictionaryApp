@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		73F2FD826AD0782D97C88B8E /* Pods_DictionaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0329DD8262F96AFFF2EB470D /* Pods_DictionaryApp.framework */; };
+		CE01EA6528203CFB00C7F5C8 /* TestCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01EA6428203CFB00C7F5C8 /* TestCompiler.swift */; };
+		CE01EA6C282048C500C7F5C8 /* TrainingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01EA6B282048C500C7F5C8 /* TrainingTask.swift */; };
+		CE01EA6F2820570100C7F5C8 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01EA6E2820570100C7F5C8 /* Phonetic.swift */; };
+		CE01EA712820572200C7F5C8 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01EA702820572200C7F5C8 /* Meaning.swift */; };
+		CE01EA732820573500C7F5C8 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01EA722820573500C7F5C8 /* Definition.swift */; };
 		CE24CF9F27D520E5009EA264 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CF9E27D520E5009EA264 /* OnboardingViewModel.swift */; };
 		CE24CFA127D521CE009EA264 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA027D521CE009EA264 /* Images.swift */; };
 		CE24CFA627D665AB009EA264 /* OnboardingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CFA527D665AB009EA264 /* OnboardingCellViewModel.swift */; };
@@ -89,6 +94,11 @@
 /* Begin PBXFileReference section */
 		0329DD8262F96AFFF2EB470D /* Pods_DictionaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DictionaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAA2C7F6036868DD40CB587 /* Pods-DictionaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictionaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DictionaryApp/Pods-DictionaryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CE01EA6428203CFB00C7F5C8 /* TestCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompiler.swift; sourceTree = "<group>"; };
+		CE01EA6B282048C500C7F5C8 /* TrainingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTask.swift; sourceTree = "<group>"; };
+		CE01EA6E2820570100C7F5C8 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
+		CE01EA702820572200C7F5C8 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		CE01EA722820573500C7F5C8 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
 		CE24CF9E27D520E5009EA264 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		CE24CFA027D521CE009EA264 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		CE24CFA527D665AB009EA264 /* OnboardingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellViewModel.swift; sourceTree = "<group>"; };
@@ -194,6 +204,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE01EA6628203D6400C7F5C8 /* CountdownItem */ = {
+			isa = PBXGroup;
+			children = (
+				CE25E30C281DA6E8005549A6 /* CountdownItemIterator.swift */,
+				CE25E305281D9687005549A6 /* CountdownItem.swift */,
+			);
+			path = CountdownItem;
+			sourceTree = "<group>";
+		};
+		CE01EA6728203D7500C7F5C8 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CEF78AE727D4FAB700A82A6F /* Coordinator.swift */,
+				CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */,
+				CE24CFD727E23A4E009EA264 /* TabCoordinator.swift */,
+				CE24CFD227E23420009EA264 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CE01EA6D282056E200C7F5C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CFFE27E284D4009EA264 /* Word.swift */,
+				CE01EA6E2820570100C7F5C8 /* Phonetic.swift */,
+				CE01EA702820572200C7F5C8 /* Meaning.swift */,
+				CE01EA722820573500C7F5C8 /* Definition.swift */,
+				CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */,
+				CE01EA6B282048C500C7F5C8 /* TrainingTask.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE24CF9C27D520CB009EA264 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +265,6 @@
 		CE24CFB727D69F81009EA264 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CFC527DDA29D009EA264 /* Model */,
 				CE24CFB927D69F8E009EA264 /* ViewModel */,
 				CE24CFB827D69F8A009EA264 /* View */,
 			);
@@ -269,18 +311,11 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CE24CFC527DDA29D009EA264 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE24CFAA27D66E6B009EA264 /* TopicInfo.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CE24CFCB27E21BD8009EA264 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				CE24D00127E45FD4009EA264 /* Repository */,
+				CE01EA6428203CFB00C7F5C8 /* TestCompiler.swift */,
 				CE24CFCC27E21BED009EA264 /* Validator.swift */,
 				CE24D03527E73278009EA264 /* AudioService.swift */,
 			);
@@ -363,7 +398,6 @@
 		CE24CFF227E27192009EA264 /* Word */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CFF527E271A7009EA264 /* Model */,
 				CE24CFF427E2719F009EA264 /* ViewModel */,
 				CE24CFF327E27198009EA264 /* View */,
 			);
@@ -388,14 +422,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CE24CFF527E271A7009EA264 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE24CFFE27E284D4009EA264 /* Word.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CE24D00027E36BB5009EA264 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,8 +436,8 @@
 				CEF7792F27F720520093103C /* APIService */,
 				CE24D00627E4EB51009EA264 /* CoreDataService */,
 				CE24D00427E46281009EA264 /* Repository.swift */,
-				CE24D02F27E51077009EA264 /* WordsRepository.swift */,
 				CEDA11882800698B00F544BE /* DictionaryDataSource.swift */,
+				CE24D02F27E51077009EA264 /* WordsRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -420,9 +446,9 @@
 			isa = PBXGroup;
 			children = (
 				CE24D00A27E4ED58009EA264 /* Models */,
-				CE24D00727E4EB6F009EA264 /* Model.xcdatamodeld */,
 				CE24D01B27E4EE65009EA264 /* CoreDataContextProvider.swift */,
 				CE24D03127E52EA5009EA264 /* CoreDataService.swift */,
+				CE24D00727E4EB6F009EA264 /* Model.xcdatamodeld */,
 			);
 			path = CoreDataService;
 			sourceTree = "<group>";
@@ -513,8 +539,10 @@
 		CEF78ACE27D4F9A900A82A6F /* DictionaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE01EA6D282056E200C7F5C8 /* Models */,
 				CEF78AF927D502CC00A82A6F /* Custom */,
 				CEF78AE327D4FA7000A82A6F /* Support */,
+				CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */,
 				CEF78AE527D4FA7A00A82A6F /* Constants */,
 				CEF78AE427D4FA7600A82A6F /* Scenes */,
 				CEF78ACF27D4F9A900A82A6F /* AppDelegate.swift */,
@@ -529,13 +557,8 @@
 			isa = PBXGroup;
 			children = (
 				CE24CFCB27E21BD8009EA264 /* Services */,
-				CEF78AE727D4FAB700A82A6F /* Coordinator.swift */,
-				CEF78AE927D4FAF900A82A6F /* AppCoordinator.swift */,
-				CE25E30C281DA6E8005549A6 /* CountdownItemIterator.swift */,
-				CEF78AEB27D4FB1E00A82A6F /* Dependencies.swift */,
-				CE24CFD227E23420009EA264 /* TabBarCoordinator.swift */,
-				CE24CFD727E23A4E009EA264 /* TabCoordinator.swift */,
-				CE25E305281D9687005549A6 /* CountdownItem.swift */,
+				CE01EA6628203D6400C7F5C8 /* CountdownItem */,
+				CE01EA6728203D7500C7F5C8 /* Coordinators */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -604,8 +627,8 @@
 		CEF78AF927D502CC00A82A6F /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CFEB27E2695F009EA264 /* CustomTextField */,
 				CE24CFBC27D6A302009EA264 /* Views */,
+				CE24CFEB27E2695F009EA264 /* CustomTextField */,
 				CEF78AF027D5008500A82A6F /* Fonts */,
 				CEF78AFA27D5031C00A82A6F /* BaseViewController.swift */,
 				CE24CFAC27D67844009EA264 /* OrangeRoundedButton.swift */,
@@ -784,18 +807,23 @@
 				CE25E306281D9687005549A6 /* CountdownItem.swift in Sources */,
 				CE24CFD327E23420009EA264 /* TabBarCoordinator.swift in Sources */,
 				CE24D03027E51077009EA264 /* WordsRepository.swift in Sources */,
+				CE01EA6F2820570100C7F5C8 /* Phonetic.swift in Sources */,
 				CE24CFA827D665F2009EA264 /* OnboardingCellView.swift in Sources */,
 				CE24CFC227D6A75D009EA264 /* SignUpViewController.swift in Sources */,
 				CEF78B0127D519E600A82A6F /* OnboardingCoordinator.swift in Sources */,
 				CE25E30D281DA6E8005549A6 /* CountdownItemIterator.swift in Sources */,
 				CE24CFE327E23B73009EA264 /* TrainingViewController.swift in Sources */,
+				CE01EA6C282048C500C7F5C8 /* TrainingTask.swift in Sources */,
 				CEF78AEC27D4FB1E00A82A6F /* Dependencies.swift in Sources */,
 				CE24CFB327D695DD009EA264 /* CustomPageControl.swift in Sources */,
 				CE24D02627E4F0EB009EA264 /* DBPhonetic+CoreDataProperties.swift in Sources */,
 				CEDA11892800698B00F544BE /* DictionaryDataSource.swift in Sources */,
 				CEF7793F27F72D3D0093103C /* Strings.swift in Sources */,
+				CE01EA6528203CFB00C7F5C8 /* TestCompiler.swift in Sources */,
 				CEF78AE827D4FAB700A82A6F /* Coordinator.swift in Sources */,
+				CE01EA732820573500C7F5C8 /* Definition.swift in Sources */,
 				CE24D00527E46281009EA264 /* Repository.swift in Sources */,
+				CE01EA712820572200C7F5C8 /* Meaning.swift in Sources */,
 				CE24D02527E4F0EB009EA264 /* DBPhonetic+CoreDataClass.swift in Sources */,
 				CE24CFEF27E2699B009EA264 /* SearchTextField.swift in Sources */,
 				CE24D02827E4F0EB009EA264 /* DBMeaning+CoreDataProperties.swift in Sources */,

@@ -17,6 +17,8 @@
 "alreadyInRepository" = "Word is already in dictionary";
 "noSuchWordInRepository" = "No such word in repository";
 
+"emptyDictionary" = "Dictionary is empty.\nAdd words to Dictionary";
+
 "dictionaryTabTitle" = "Dictionary";
 "trainingTabTitle" = "Training";
 "videoTabTitle" = "Video";

@@ -18,12 +18,14 @@ enum ValidationError: LocalizedError {
 }
 
 enum Errors: LocalizedError {
-    case indexOutOfRange
+    case indexOutOfRange, emptyDictionary
     
     var errorDescription: String? {
         switch self {
         case .indexOutOfRange:
             return R.string.localizable.indexOutOfRange()
+        case .emptyDictionary:
+            return ""
         }
     }
 }

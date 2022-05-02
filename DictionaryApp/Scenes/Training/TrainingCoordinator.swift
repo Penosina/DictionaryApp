@@ -10,7 +10,7 @@ final class TrainingCoordinator: TabCoordinator {
 // MARK: - TrainingViewModelDelegate
 extension TrainingCoordinator: TrainingViewModelDelegate {
     func showQuestionScene() {
-        let questionsViewModel = QuestionsViewModel()
+        let questionsViewModel = QuestionsViewModel(dependencies: dependencies)
         let questionsVC = QuestionsViewController(viewModel: questionsViewModel)
         rootNavigationController.tabBarController?.tabBar.isHidden = true
         rootNavigationController.setViewControllers([ questionsVC ], animated: true)

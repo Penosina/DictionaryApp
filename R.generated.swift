@@ -598,7 +598,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 20 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 21 localization keys.
     struct localizable {
       /// en translation: Coming Soon...
       ///
@@ -612,6 +612,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let dictionaryTabTitle = Rswift.StringResource(key: "dictionaryTabTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Dictionary is empty. Add words to Dictionary
+      ///
+      /// Locales: en
+      static let emptyDictionary = Rswift.StringResource(key: "emptyDictionary", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: E-mail
       ///
       /// Locales: en
@@ -724,6 +728,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("dictionaryTabTitle", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Dictionary is empty. Add words to Dictionary
+      ///
+      /// Locales: en
+      static func emptyDictionary(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emptyDictionary", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "emptyDictionary"
+        }
+
+        return NSLocalizedString("emptyDictionary", bundle: bundle, comment: "")
       }
 
       /// en translation: E-mail

@@ -16,7 +16,6 @@ final class CountdownView: UIView {
     func configure(with viewModel: CountdownViewModel) {
         self.viewModel = viewModel
         setup()
-        
         bindToViewModel()
     }
     
