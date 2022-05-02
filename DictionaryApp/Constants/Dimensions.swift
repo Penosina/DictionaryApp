@@ -1,6 +1,8 @@
 import CoreGraphics
 
 enum Dimensions {
+    /// 33.0
+    static let buttonHorizontalCostraint = 33.0
     /// 32.0
     static let large = 32.0
     /// 24.0

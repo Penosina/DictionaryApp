@@ -23,7 +23,10 @@ final class SignUpViewModel {
         didUpdateData?(signUpTopicViewModel)
     }
     
-    func signUp(name: String?, email: String?, password: String?) {        
+    func signUp(name: String?, email: String?, password: String?) {
+        delegate?.showTabBar()
+        return
+        
         guard
             let name = name,
             let email = email,

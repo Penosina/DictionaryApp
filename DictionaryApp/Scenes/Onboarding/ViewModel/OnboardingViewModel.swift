@@ -33,18 +33,18 @@ final class OnboardingViewModel {
     private let cellViewModels: [OnboardingCellViewModel] = [
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingFirst,
-            title: R.string.localizable.onboardingFirstTitle(),
-            subtitle: R.string.localizable.onboardingFirstSubtitle()
+            title: R.string.onboarding.firstTitle(),
+            subtitle: R.string.onboarding.firstSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingSecond,
-            title: R.string.localizable.onboardingSecondTitle(),
-            subtitle: R.string.localizable.onboardingSecondSubtitle()
+            title: R.string.onboarding.secondTitle(),
+            subtitle: R.string.onboarding.secondSubtitle()
         )),
         OnboardingCellViewModel(topicInfo: TopicInfo(
             image: Images.onboardingThird,
-            title: R.string.localizable.onboardingThirdTitle(),
-            subtitle: R.string.localizable.onboardingThirdSubtitle()
+            title: R.string.onboarding.thirdTitle(),
+            subtitle: R.string.onboarding.thirdSubtitle()
         ))
     ]
     

@@ -23,24 +23,9 @@ struct Word: Codable {
     }
 }
 
-struct Phonetic: Codable {
-    let text: String?
-    let audio: String?
-    var audioURL: URL? {
-        guard let audio = audio else {
-            return nil
-        }
-        
-        return URL(string: audio)
+// MARK: - Equatable
+extension Word: Equatable {
+    static func == (lhs: Word, rhs: Word) -> Bool {
+        lhs.word == rhs.word
     }
-}
-
-struct Meaning: Codable {
-    let partOfSpeech: String?
-    let definitions: [Definition]?
-}
-
-struct Definition: Codable {
-    let definition: String?
-    let example: String?
 }
